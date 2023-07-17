@@ -18,8 +18,14 @@ export default function Home() {
         >
           <LeftSide />
         </motion.div>
-        <div className="mx-auto p-4 h-[88vh]">
+        <div className="mx-auto w-full p-4 h-[88vh]">
           <Banner />
+          {/* About */}
+          {/* Experience */}
+          {/* Projects */}
+          {/* Archive */}
+          {/* Contact */}
+          {/* Footer */}
         </div>
         <motion.div
           initial={{ opacity: 0 }}

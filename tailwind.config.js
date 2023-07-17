@@ -13,6 +13,10 @@ module.exports = {
       containerxs: "768px",
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
+      },
       screens: {
         xs: "320px",
         sm: "375px",

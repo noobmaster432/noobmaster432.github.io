@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -6,8 +5,8 @@ import { Gyan } from "@/public/assets";
 
 const Navbar = () => {
   return (
-    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-16">
-      <div className="max-w-container h-full mx-auto py-1 font-mono flex items-center justify-between">
+    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-8">
+      <div className="max-w-container h-full mx-auto py-1 font-sans flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -16,7 +15,7 @@ const Navbar = () => {
           <Image src={Gyan} className="w-8" alt="Gyan" />
         </motion.div>
         <div className="hidden mdl:inline-flex gap-7">
-          <ul className="flex text-sm items-center md:gap-5 lg:gap-7">
+          <ul className="flex text-[13px] items-center md:gap-5 lg:gap-7">
             <Link
               href="#home"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
