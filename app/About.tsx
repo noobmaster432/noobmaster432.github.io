@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-containerSmall px-2 sml:px-8 xl:px-0 mx-auto py-10 mdl:py-12 flex flex-col gap-4 lgl:gap-8 scroll-m-12"
+      className="max-w-containerSmall px-2 sml:px-8 md:px-0 mx-auto py-10 lgl:py-12 flex flex-col gap-4 lgl:gap-8 scroll-m-14"
     >
       <SectionTitle title="About Me" number="01" />
       <div className="flex flex-col lgl:flex-row gap-16">
@@ -91,7 +91,7 @@ const About = () => {
           </ul>
         </div>
 
-        <div className="w-3/5 mx-auto lgl:w-1/3 lgl:h-80 relative group">
+        <div className="w-3/5 mx-auto md:w-1/3 lgl:h-80 relative group">
           <div className="w-full h-full relative z-20 p-2 flex items-center justify-between rounded-full lgl:group-hover:border-2 border-textGreen">
             <Image
               src={photo}

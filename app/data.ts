@@ -38,43 +38,37 @@ const archives = [
     id: 1,
     name: "Project Pilot",
     description:
-      "A project management system that provides effective project management tools. It includes Kanban features for monitoring progress, a Calendar for scheduling, and Conversations as a discussion forum for effective project management.",
+      "A project management system that provides streamlined and effective project management tools like Kanban features for monitoring progress, a Calendar for scheduling, and Conversations as a discussion forum.",
     link: "https://project-pilot-ten.vercel.app/",
     github: "https://github.com/noobmaster432/ProjectPilot",
-    tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Zustand"],
+    tech: ["Reactjs", "Node.js", "Zustand"],
   },
   {
     id: 2,
     name: "Yaatra",
     description:
-      "An Airbnb clone featuring a date and calendar booking functionality, a fast search functionality, UI/UX design with Tailwind CSS and Chakra UI, Mapbox integration for listing locations, and a backend with data relationships managed using Sanity Studio.",
+      "An Airbnb clone featuring a date and calendar booking functionality, a fast search functionality, UI/UX design with Tailwind CSS, Mapbox integration for listing locations, and a backend with data relationships managed using Sanity Studio.",
     link: "https://yaatra.vercel.app/",
     github: "https://github.com/noobmaster432/yaatra",
-    tech: ["Next.JS", "Tailwind CSS", "Mapbox", "Sanity Studio"],
+    tech: ["Next.js", "Tailwind CSS", "Sanity Studio"],
   },
   {
     id: 3,
-    name: "BaatChit",
+    name: "The Illuminate",
     description:
-      "A Realtime private chat web application built using React and Firebase which provides users with a seamless chatting experience, secure authentication, and real-time updates of chat messages.",
-    link: "https://baatchit-nb.vercel.app/",
-    github: "https://github.com/noobmaster432/BaatChit",
-    tech: ["React", "Firebase", "SaSS"],
+      "A Real-Time News Application featuring dynamic data handling, dark mode, searching capabilities, pulling data from MediaStack News API, using Stepzen to launch a GraphQL interface and using TypeScript for fewer bugs and errors.",
+    link: "https://the-illuminate.vercel.app/",
+    github: "https://github.com/noobmaster432/the-illuminate",
+    tech: ["Next.js", "MediaStack API", "Stepzen"],
   },
   {
     id: 4,
-    name: "The Illuminate",
+    name: "BaatChit",
     description:
-      "A Real-Time News Application featuring dynamic and static data handling, dark mode, searching capabilities, dynamic page routing, pulling data from MediaStack News API, using Stepzen to launch a GraphQL interface and using TypeScript for fewer bugs and errors",
-    link: "https://the-illuminate.vercel.app/",
-    github: "https://github.com/noobmaster432/the-illuminate",
-    tech: [
-      "Next.JS",
-      "Tailwind CSS",
-      "TypeScript",
-      "MediaStack API",
-      "Stepzen",
-    ],
+      "A Realtime private chat web application built using React and Firebase. It provides users with a secure authentication, real-time updates of chat messages, and seamless chatting experience to communicate in real time.",
+    link: "https://baatchit-nb.vercel.app/",
+    github: "https://github.com/noobmaster432/BaatChit",
+    tech: ["Reactjs", "Firebase", "SaSS"],
   },
   {
     id: 5,
@@ -83,16 +77,16 @@ const archives = [
       "A fully responsive headless CMS blog application built using Next.js, Tailwind CSS, Graph QL, and HyGraph that features featured and recent posts, categories, full markdown articles, author information, comments and more.",
     link: "https://blog-avenue.vercel.app/",
     github: "https://github.com/noobmaster432/Blog-Avenue",
-    tech: ["Next.JS", "Tailwind CSS", "Graph QL", "HyGraph"],
+    tech: ["Next.js", "Tailwind CSS", "Graph QL"],
   },
   {
     id: 6,
     name: "KhabrAI",
     description:
-      "An Artificial Intelligence React News Application that utilizes Alan AI for speech recognition, pulling data from News API and Material-UI for the user interface. The application enables users to control every aspect of the app using just their voice.",
+      "An Artificial Intelligence News Application that utilizes Alan AI for speech recognition, pulling data from News API and Material-UI for the user interface. The application enables users to control every aspect of the app using just their voice.",
     link: "https://khabr-ai.netlify.app/",
     github: "https://github.com/noobmaster432/khabrAI",
-    tech: ["React", "Material UI", "Alan AI", "News API"],
+    tech: ["Reactjs", "Material UI", "Alan AI"],
   },
 ];
 

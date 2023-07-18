@@ -43,12 +43,12 @@ const Banner = () => {
           </span>
         </a>
       </motion.p>
-      <a href="https://github.com/noobmaster432" target="_blank">
+      <a href="https://github.com/noobmaster432" target="_blank" className="w-fit">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
-          className="w-40 h-12 sm:w-52 sm:h-14 text-xs sm:text-sm font-sans border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
+          className="py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm font-sans border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
         >
           Check out my Project!
         </motion.button>

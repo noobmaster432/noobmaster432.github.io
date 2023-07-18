@@ -14,7 +14,7 @@ interface projectProps {
 
 const ProjectCard = ({id, name, description, image, github, link, tech}: projectProps) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
+    <div className="w-full flex flex-col items-center justify-center gap-28">
       <div className={`flex flex-col ${id===2 ? "lgl:flex-row-reverse" : "lgl:flex-row"} gap-6`}>
         <a href={link} target="_blank" className="w-full lgl:w-1/2 h-auto relative group">
           <div>
@@ -23,6 +23,7 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
               src={image}
               alt={name}
             />
+            <div className="absolute w-full h-full bg-black opacity-20 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
           </div>
         </a>
         <div className={`w-full lgl:w-1/2 flex flex-col gap-3 lgl:justify-between items-end text-right ${id===2 ? "" : "lgl:-ml-16"} z-10`}>
@@ -39,10 +40,10 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
             ))}
           </ul>
           <div className="text-2xl flex gap-4">
-            <a href={github} target="_blank" className="hover:text-textGreen duration-300">
+            <a href={github} target="_blank" className="hover:text-textGreen text-textDark duration-300">
               <TbBrandGithub />
             </a>
-            <a href={link} target="_blank" className="hover:text-textGreen duration-300">
+            <a href={link} target="_blank" className="hover:text-textGreen text-textDark duration-300">
               <RxOpenInNewWindow />
             </a>
           </div>

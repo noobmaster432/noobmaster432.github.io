@@ -6,8 +6,8 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   return (
     <section
-      id="experience"
-      className="max-w-container mx-auto py-10 lgl:py-12 px-24"
+      id="projects"
+      className="max-w-container mx-auto py-10 lgl:py-12 lgl:pl-3 xl:px-24 scroll-m-14"
     >
       <SectionTitle title="Some Things I have Built" number="03" />
       <div className="w-full flex flex-col items-center justify-between gap-16 mt-10">
