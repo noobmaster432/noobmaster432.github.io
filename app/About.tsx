@@ -1,7 +1,7 @@
 import { AiFillThunderbolt } from "react-icons/ai";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
-import { connector, photo } from "@/public/assets";
+import { photo } from "@/public/assets";
 
 const About = () => {
   return (

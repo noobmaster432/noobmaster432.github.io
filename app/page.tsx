@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Experience from "./Experience";
 import LeftSide from "./LeftSide";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 import RightSide from "./RightSide";
 import { motion } from "framer-motion";
 
@@ -24,7 +25,7 @@ export default function Home() {
           <Banner />
           <About />
           <Experience />
-          {/* Projects */}
+          <Projects />
           {/* Archive */}
           {/* Contact */}
           {/* Footer */}
