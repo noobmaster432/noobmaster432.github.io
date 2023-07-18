@@ -19,7 +19,6 @@ const Navbar = () => {
             <Link
               href="#home"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
-              // onClick={handleScroll}
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
@@ -32,7 +31,6 @@ const Navbar = () => {
             <Link
               href="#about"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
-              // onClick={handleScroll}
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
@@ -45,7 +43,6 @@ const Navbar = () => {
             <Link
               href="#experience"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
-              // onClick={handleScroll}
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
@@ -58,7 +55,6 @@ const Navbar = () => {
             <Link
               href="#projects"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
-              // onClick={handleScroll}
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
@@ -71,7 +67,6 @@ const Navbar = () => {
             <Link
               href="#contact"
               className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
-              // onClick={handleScroll}
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}

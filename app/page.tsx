@@ -1,5 +1,7 @@
 "use client";
+import About from "./About";
 import Banner from "./Banner";
+import Experience from "./Experience";
 import LeftSide from "./LeftSide";
 import Navbar from "./Navbar";
 import RightSide from "./RightSide";
@@ -20,8 +22,8 @@ export default function Home() {
         </motion.div>
         <div className="mx-auto w-full p-4 h-[88vh]">
           <Banner />
-          {/* About */}
-          {/* Experience */}
+          <About />
+          <Experience />
           {/* Projects */}
           {/* Archive */}
           {/* Contact */}
