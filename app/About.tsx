@@ -8,11 +8,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-containerSmall px-2 sml:px-8 md:px-0 mx-auto py-10 lgl:py-12 flex flex-col gap-4 lgl:gap-8 scroll-m-14"
+      className="max-w-containerSmall px-2 sml:px-8 md:px-0 mx-auto py-10 lgl:py-12 scroll-m-14"
     >
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.5 }}
+        className="flex flex-col gap-4 lgl:gap-8"
       >
         <SectionTitle title="About Me" number="01" />
         <div className="flex flex-col lgl:flex-row gap-16">
