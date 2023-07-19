@@ -5,7 +5,7 @@ import { Gyan } from "@/public/assets";
 import { useRef, useState } from "react";
 import {MdOutlineClose} from "react-icons/md";
 import { TbBrandGithub, TbBrandLeetcode } from "react-icons/tb";
-import { SlSocialLinkedin } from "react-icons/sl";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { SiCodechef, SiCodeforces } from "react-icons/si";
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.1 }}
         >
           <Image src={Gyan} className="w-8" alt="Gyan" />
         </motion.div>
@@ -116,7 +116,7 @@ const Navbar = () => {
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.2 }}
               className="text-textGreen px-4 py-2 rounded-md font-medium text-sm border border-textGreen hover:bg-hoverColor transition duration-300 ease-in-out"
             >
               Resume
@@ -247,7 +247,7 @@ const Navbar = () => {
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <SlSocialLinkedin />
+                      <BiLogoLinkedin />
                     </span>
                   </a>
                   <a

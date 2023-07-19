@@ -19,7 +19,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 1.0 }}
           className="hidden xl:inline-flex w-28 h-full fixed left-0 bottom-3"
         >
           <LeftSide />
@@ -36,7 +36,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 1.0 }}
           className="hidden xl:inline-flex w-28 h-full fixed right-0 bottom-3"
         >
           <RightSide />

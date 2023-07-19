@@ -9,7 +9,7 @@ const projects = [
     image: filmfiesta,
     link: "https://film-fiesta.vercel.app/",
     github: "https://github.com/noobmaster432/FilmFiesta",
-    tech: ["React", "Redux", "Material UI", "Node.js", "TMDB API"],
+    tech: ["Reactjs", "Redux", "Material UI", "Node.js", "MongoDB", "TMDB API"],
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
     image: buzznet,
     link: "https://buzznet-tweet.vercel.app/",
     github: "https://github.com/noobmaster432/buzznet",
-    tech: ["Next.JS", "Zustand", "Tailwind CSS", "Prisma", "MongoDB"],
+    tech: ["Next.JS", "Zustand", "Tailwind CSS", "TypeScript", "Prisma", "MongoDB"],
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     image: nivaas,
     link: "https://nivaas.vercel.app/",
     github: "https://github.com/noobmaster432/nivaas",
-    tech: ["React", "Material UI", "Cloudinary","TypeScript", "MongoDB"],
+    tech: ["Reactjs", "Material UI", "Cloudinary", "TypeScript", "MongoDB"],
   },
 ];
 

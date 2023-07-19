@@ -1,6 +1,6 @@
 import { TbBrandGithub, TbBrandLeetcode } from "react-icons/tb";
-import { SlSocialLinkedin } from "react-icons/sl";
 import { SiCodechef, SiCodeforces } from "react-icons/si";
+import { BiLogoLinkedin } from "react-icons/bi";
 
 const LeftSide = () => {
   return (
@@ -13,7 +13,7 @@ const LeftSide = () => {
         </a>
         <a href="https://www.linkedin.com/in/noobmaster432" target="_blank">
           <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-            <SlSocialLinkedin />
+            <BiLogoLinkedin />
           </span>
         </a>
         <a href="https://leetcode.com/noobmaster_432/" target="_blank">

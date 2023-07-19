@@ -36,14 +36,14 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
           </p>
           <ul className="text-xs md:text-sm font-sans tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
             {tech.map((t, index) => (
-              <li key={index}>{t}</li>
+              <li key={index} className="w-fit hover:text-textLight cursor-pointer">{t}</li>
             ))}
           </ul>
           <div className="text-2xl flex gap-4">
-            <a href={github} target="_blank" className="hover:text-textGreen text-textDark duration-300">
+            <a href={github} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-105">
               <TbBrandGithub />
             </a>
-            <a href={link} target="_blank" className="hover:text-textGreen text-textDark duration-300">
+            <a href={link} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-105">
               <RxOpenInNewWindow />
             </a>
           </div>
