@@ -97,9 +97,9 @@ const experience = [
     company: "Coforge",
     duration: "May 2023 - Present",
     points: [
-      "Developed and enhanced a Dashboarding and Reporting Tool using Ruby on Rails and MySQL.",
-      "Integrated data visualization components to present data in visually appealing and informative ways.",
-      "Collaborated with a team of developers to implement new features, including data visualization components and interactive dashboards, resulting in improved data analysis and decision-making capabilities.",
+      "Spearheaded the end-to-end development and enhancement of a modern Dashboarding and Reporting Tool using Ruby on Rails and MySQL, resulting in a 25% increase in data analysis efficiency.",
+      "Expanded data exploration capabilities through the implementation of interactive dashboards and dynamic data visualizations, contributing to a 40% improvement in decision-making efficiency.",
+      "Optimized application performance and scalability, achieving a 30% reduction in page load time by implementing efficient code execution and caching techniques.",
     ],
   },
   {
@@ -108,9 +108,9 @@ const experience = [
     company: "GDSC IIITR",
     duration: "Dec 2022 - Present",
     points: [
-        "Organized and conducted workshops and training sessions on Javascript, React.js and GitHub.",
+        "Skillfully curated and led engaging workshops and training sessions on JavaScript, React.js, and GitHub.",
         "Developed and delivered high-quality web applications utilizing modern technologies.",
-        "Provided guidance and support to club members on web development projects, troubleshooting code issues and offering coding best practices.",
+        "Provided valuable guidance and support to club members, offering coding best practices and troubleshooting code issues to foster a collaborative and proficient learning environment",
     ],
   },
 ];

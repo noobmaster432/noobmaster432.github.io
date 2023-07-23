@@ -40,10 +40,10 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
             ))}
           </ul>
           <div className="text-2xl flex gap-4">
-            <a href={github} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-105">
+            <a href={github} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-110">
               <TbBrandGithub />
             </a>
-            <a href={link} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-105">
+            <a href={link} target="_blank" className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-110">
               <RxOpenInNewWindow />
             </a>
           </div>
