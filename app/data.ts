@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     name: "FilmFiesta",
     description:
-      "A movie review web application that allows users to sign up/sign in and save movies to their favorite list and remove items from it. They can also write reviews for movies and delete them.",
+      "A dynamic movie review web application that empowers users to explore, review, and interact with their favorite movies and TV series. With a user-friendly interface and a wide array of features, FilmFiesta provides a comprehensive platform for cinephiles to engage with their passion.",
     image: filmfiesta,
     link: "https://film-fiesta.vercel.app/",
     github: "https://github.com/noobmaster432/FilmFiesta",
@@ -15,17 +15,24 @@ const projects = [
     id: 2,
     name: "BuzzNet",
     description:
-      "A Twitter clone which offers features like authentication, notifications, image upload, and responsive layout. It also provides comments/replies, and likes system to engage with posts.",
+      "A vibrant and feature-packed Twitter clone that brings the essence of social networking to life. Built using a powerful stack including Next.js, Tailwind CSS, Prisma, Zustand, and MongoDB, Buzznet offers a comprehensive social media experience.",
     image: buzznet,
     link: "https://buzznet-tweet.vercel.app/",
     github: "https://github.com/noobmaster432/buzznet",
-    tech: ["Next.JS", "Zustand", "Tailwind CSS", "TypeScript", "Prisma", "MongoDB"],
+    tech: [
+      "Next.JS",
+      "Zustand",
+      "Tailwind CSS",
+      "TypeScript",
+      "Prisma",
+      "MongoDB",
+    ],
   },
   {
     id: 3,
     name: "Nivaas",
     description:
-      "A fully functional MERN dashboard real estate application that provides complete CRUD functionalities, authentication, pagination, sorting, filtering, and more. ",
+      "A fully functional full-stack MERN dashboard application tailored for the real estate domain. With comprehensive CRUD functionalities, authentication, advanced data handling, and an elegant user interface, Nivaas empowers real estate professionals to efficiently manage and showcase property listings.",
     image: nivaas,
     link: "https://nivaas.vercel.app/",
     github: "https://github.com/noobmaster432/nivaas",
@@ -36,6 +43,15 @@ const projects = [
 const archives = [
   {
     id: 1,
+    name: "Whisper",
+    description:
+      "A feature-rich Full Stack Chat application that brings you a seamless messaging experience. Whisper offers real-time chat functionality, voice notes, emoji support, video calls, voice calls, and a plethora of other features. ",
+    link: "https://github.com/noobmaster432/whisper",
+    github: "https://github.com/noobmaster432/whisper",
+    tech: ["Nextjs", "Node.js", "Socket-io"],
+  },
+  {
+    id: 2,
     name: "Project Pilot",
     description:
       "A project management system that provides streamlined and effective project management tools like Kanban features for monitoring progress, a Calendar for scheduling, and Conversations as a discussion forum.",
@@ -44,7 +60,7 @@ const archives = [
     tech: ["Reactjs", "Node.js", "Zustand"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Yaatra",
     description:
       "An Airbnb clone featuring a date and calendar booking functionality, a fast search functionality, UI/UX design with Tailwind CSS, Mapbox integration for listing locations, and a backend with data relationships managed using Sanity Studio.",
@@ -53,7 +69,16 @@ const archives = [
     tech: ["Next.js", "Tailwind CSS", "Sanity Studio"],
   },
   {
-    id: 3,
+    id: 4,
+    name: "Pics Palette",
+    description:
+      "A full-stack social media application which allows users to share their experiences by posting pictures along with captivating stories, and other users can interact with these posts by liking and commenting on them.",
+    link: "https://picture-book-iiitr.vercel.app/",
+    github: "https://github.com/gdsciiitr/pics_palette",
+    tech: ["Reactjs", "Node.js", "Redux"],
+  },
+  {
+    id: 5,
     name: "The Illuminate",
     description:
       "A Real-Time News Application featuring dynamic data handling, dark mode, searching capabilities, pulling data from MediaStack News API, using Stepzen to launch a GraphQL interface and using TypeScript for fewer bugs and errors.",
@@ -62,7 +87,7 @@ const archives = [
     tech: ["Next.js", "MediaStack API", "Stepzen"],
   },
   {
-    id: 4,
+    id: 6,
     name: "BaatChit",
     description:
       "A Realtime private chat web application built using React and Firebase. It provides users with a secure authentication, real-time updates of chat messages, and seamless chatting experience to communicate in real time.",
@@ -71,7 +96,7 @@ const archives = [
     tech: ["Reactjs", "Firebase", "SaSS"],
   },
   {
-    id: 5,
+    id: 7,
     name: "Blog Avenue",
     description:
       "A fully responsive headless CMS blog application built using Next.js, Tailwind CSS, Graph QL, and HyGraph that features featured and recent posts, categories, full markdown articles, author information, comments and more.",
@@ -80,7 +105,7 @@ const archives = [
     tech: ["Next.js", "Tailwind CSS", "Graph QL"],
   },
   {
-    id: 6,
+    id: 8,
     name: "KhabrAI",
     description:
       "An Artificial Intelligence News Application that utilizes Alan AI for speech recognition, pulling data from News API and Material-UI for the user interface. The application enables users to control every aspect of the app using just their voice.",
@@ -93,9 +118,9 @@ const archives = [
 const experience = [
   {
     id: 1,
-    name: "Full Stack Developer Intern",
+    name: "Software Developer Intern",
     company: "Coforge",
-    duration: "May 2023 - Present",
+    duration: "May 2023 - Jul 2023",
     points: [
       "Spearheaded the end-to-end development and enhancement of a modern Dashboarding and Reporting Tool using Ruby on Rails and MySQL, resulting in a 25% increase in data analysis efficiency.",
       "Expanded data exploration capabilities through the implementation of interactive dashboards and dynamic data visualizations, contributing to a 40% improvement in decision-making efficiency.",
