@@ -42,13 +42,13 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-sm sm:text-base font-body md:max-w-[650px] text-textDark font-medium"
       >
-        I am a web developer and a competitive programmer. I have a strong
-        foundation in front-end & back-end development and am skilled in
-        creating user-friendly and responsive web applications using React and
-        its ecosystem.
+        I embody the role of a web developer with a flair for competitive
+        programming. My expertise spans both front-end and back-end development,
+        forming a solid groundwork. Proficient in harnessing the potential of
+        React and its comprehensive ecosystem, I specialize in designing web
+        applications that prioritize user experience.
         <a href="#about">
-          <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
-            {" "}
+          <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group ml-2">
             Learn More
             <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
           </span>
@@ -65,7 +65,7 @@ const Banner = () => {
           transition={{ duration: 0.5, delay: 0.9 }}
           className="py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm font-sans border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
         >
-          Check out my Project!
+          Check out my Projects!
         </motion.button>
       </a>
     </section>

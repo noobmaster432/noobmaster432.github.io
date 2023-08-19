@@ -19,24 +19,21 @@ const About = () => {
         <div className="flex flex-col lgl:flex-row gap-16">
           <div className="w-full lgl:w-2/3 text-sm sml:text-base text-textDark font-medium flex flex-col gap-4">
             <p>
-              Hello there! I&apos;m Gyanendra Kumar Tiwari, a highly motivated
-              Full Stack Developer with a strong passion for problem-solving and
-              a knack for competitive programming. Currently pursuing my BTech
-              in Computer Science at IIIT Ranchi, I am committed to continuous
-              learning and skill evolution.
+              Hello there! I&apos;m Gyanendra Kumar Tiwari, a full stack
+              developer with a knack for competitive programming and a pre-final
+              year BTech undergrad at the prestigious Indian Institute of
+              Information Technology (IIIT) Ranchi! 🎓
             </p>
             <p>
-              My programming journey started with languages like Python, C, and
-              C++, and I am now expanding my expertise in Data Structures and
-              Algorithms alongside web development. I have hands-on experience
-              with HTML, CSS, JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB,
-              Tailwind CSS, TypeScript, NextJS, Git, and Ruby on Rails.
+              🚀 My programming journey began with languages like Python, C, and
+              C++, igniting a spark of curiosity that led me deeper into the
+              world of technology. I&apos;m currently expanding my expertise in
+              Data Structures and Algorithms alongside web development.
             </p>
             <p>
-              Being a quick learner, I grasp concepts that stay with me for
-              years. I eagerly embrace new challenges and opportunities, always
-              striving to approach tasks uniquely by investing extra time for
-              worthy results.
+              🔗 Git and Linux are like my trusty sidekicks throughout this
+              coding adventure, aiding me in version control and navigating the
+              tech ecosystem with finesse. 🐧
             </p>
             <p>
               Beyond my technical skills, I bring humor to the table. A good

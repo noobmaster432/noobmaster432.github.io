@@ -46,7 +46,7 @@ const archives = [
     name: "Whisper",
     description:
       "A feature-rich Full Stack Chat application that brings you a seamless messaging experience. Whisper offers real-time chat functionality, voice notes, emoji support, video calls, voice calls, and a plethora of other features. ",
-    link: "https://github.com/noobmaster432/whisper",
+    link: "https://whisper-buzz.vercel.app/",
     github: "https://github.com/noobmaster432/whisper",
     tech: ["Nextjs", "Node.js", "Socket-io"],
   },
