@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     name: "FilmFiesta",
     description:
-      "A dynamic movie review web application that empowers users to explore, review, and interact with their favorite movies and TV series. With a user-friendly interface and a wide array of features, FilmFiesta provides a comprehensive platform for cinephiles to engage with their passion.",
+      "A dynamic movie review web application for cinephiles that empowers users to explore, review, and interact with their favorite movies and TV series. ",
     image: filmfiesta,
     link: "https://film-fiesta.vercel.app/",
     github: "https://github.com/noobmaster432/FilmFiesta",
@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     name: "BuzzNet",
     description:
-      "A vibrant and feature-packed Twitter clone that brings the essence of social networking to life. Built using a powerful stack including Next.js, Tailwind CSS, Prisma, Zustand, and MongoDB, Buzznet offers a comprehensive social media experience.",
+      "A vibrant and feature-packed Twitter clone that brings the essence of social networking to life. Built using a powerful stack including Next.js, Tailwind CSS, Prisma, Zustand, and MongoDB.",
     image: buzznet,
     link: "https://buzznet-tweet.vercel.app/",
     github: "https://github.com/noobmaster432/buzznet",
@@ -32,7 +32,7 @@ const projects = [
     id: 3,
     name: "Nivaas",
     description:
-      "A fully functional full-stack MERN dashboard application tailored for the real estate domain. With comprehensive CRUD functionalities, authentication, advanced data handling, and an elegant user interface, Nivaas empowers real estate professionals to efficiently manage and showcase property listings.",
+      "A fully functional full-stack MERN dashboard application tailored with comprehensive CRUD functionalities, authentication, advanced data handling, and an elegant user interface.",
     image: nivaas,
     link: "https://nivaas.vercel.app/",
     github: "https://github.com/noobmaster432/nivaas",
@@ -122,20 +122,20 @@ const experience = [
     company: "Coforge",
     duration: "May 2023 - Jul 2023",
     points: [
-      "Spearheaded the end-to-end development and enhancement of a modern Dashboarding and Reporting Tool using Ruby on Rails and MySQL, resulting in a 25% increase in data analysis efficiency.",
-      "Expanded data exploration capabilities through the implementation of interactive dashboards and dynamic data visualizations, contributing to a 40% improvement in decision-making efficiency.",
-      "Optimized application performance and scalability, achieving a 30% reduction in page load time by implementing efficient code execution and caching techniques.",
+      "Pioneered the comprehensive development and enhancement of a modern Dashboarding and Reporting Tool using Ruby on Rails and MySQL, resulting in a significant boost in data analysis efficiency.",
+      "Amplified data exploration capabilities through the implementation of interactive dashboards and dynamic data visualizations.",
+      "Streamlined application performance and scalability by employing efficient code execution and caching techniques, leading to a substantial reduction in page load time.",
     ],
   },
   {
     id: 2,
     name: "GDSC Core Member",
     company: "GDSC IIITR",
-    duration: "Dec 2022 - Present",
+    duration: "Dec 2022 - Aug 2023",
     points: [
-        "Skillfully curated and led engaging workshops and training sessions on JavaScript, React.js, and GitHub.",
-        "Developed and delivered high-quality web applications utilizing modern technologies.",
-        "Provided valuable guidance and support to club members, offering coding best practices and troubleshooting code issues to foster a collaborative and proficient learning environment",
+      "Skillfully curated and led engaging workshops and training sessions on JavaScript, React.js, and GitHub.",
+      "Developed and delivered high-quality web applications utilizing modern technologies.",
+      "Provided valuable guidance and support to club members, offering coding best practices and troubleshooting code issues to foster a collaborative and proficient learning environment",
     ],
   },
 ];

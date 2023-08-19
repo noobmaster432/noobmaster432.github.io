@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
   return (
@@ -22,7 +23,17 @@ const Banner = () => {
       >
         Gyanendra Tiwari.{" "}
         <span className="text-textDark mt-2 lgl:mt-4">
-          I build things for the web.
+          <TypeAnimation
+            sequence={[
+              "I build things for the web.",
+              1000,
+              "I Turn Puzzles to Programs.",
+              1000,
+            ]}
+            wrapper="span"
+            speed={25}
+            repeat={Infinity}
+          />
         </span>
       </motion.h1>
       <motion.p
@@ -43,7 +54,11 @@ const Banner = () => {
           </span>
         </a>
       </motion.p>
-      <a href="https://github.com/noobmaster432" target="_blank" className="w-fit">
+      <a
+        href="https://github.com/noobmaster432"
+        target="_blank"
+        className="w-fit"
+      >
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
