@@ -25,7 +25,7 @@ const Contact = () => {
         </p>
         <a href="mailto:mrgyan432@gmail.com" className="w-fit mt-10">
           <button className="py-2 px-4 sm:py-3 sm:px-6 xl:py-4 xl:px-10 text-xs sm:text-sm font-sans border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300">
-            Say Hello
+            Shoot me an Email
           </button>
         </a>
       </motion.div>

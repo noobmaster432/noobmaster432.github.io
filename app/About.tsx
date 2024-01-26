@@ -1,6 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
-import { photo } from "@/public/assets";
+import { photo, nivaas } from "@/public/assets";
 import { motion } from "framer-motion";
 import { about } from "./data";
 
@@ -24,7 +24,7 @@ const About = () => {
           </div>
 
           <div className="w-3/5 mx-auto md:w-1/3 lgl:h-80 relative group">
-            <div className="w-full h-full relative z-20 p-2 flex items-center justify-between rounded-full lgl:group-hover:border-2">
+            <div className="w-full h-full relative z-20 p-2 flex items-center justify-between rounded-full lgl:group-hover:border-2 group-hover:border-indigo-900">
               <Image
                 src={photo}
                 alt="Profile Pic"

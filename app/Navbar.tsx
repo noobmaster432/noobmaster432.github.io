@@ -112,12 +112,16 @@ const Navbar = () => {
               </motion.li>
             </Link>
           </ul>
-          <a href="/resume.pdf" target="_blank" className="w-fit">
+          <a
+            href="https://drive.google.com/file/d/1XJ7K6Q5R_zrfPa3kAIoRuNbdsD5xj70Q/view"
+            target="_blank"
+            className="w-fit"
+          >
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
-              className="text-textGreen px-4 py-2 rounded-md font-medium text-sm border border-textGreen hover:bg-hoverColor transition duration-300 ease-in-out"
+              className="text-textGreen px-4 py-2 rounded-md font-medium text-sm border-[1.3px] border-textGreen hover:bg-hoverColor transition duration-300 ease-in-out"
             >
               Resume
             </motion.button>
@@ -218,7 +222,7 @@ const Navbar = () => {
                   </Link>
                 </ul>
                 <a
-                  href="/resume.pdf"
+                  href="https://drive.google.com/file/d/1XJ7K6Q5R_zrfPa3kAIoRuNbdsD5xj70Q/view"
                   target="_blank"
                   className="w-fit"
                 >
@@ -226,7 +230,7 @@ const Navbar = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, ease: "easeIn" }}
-                    className="text-textGreen px-4 py-2 rounded-md font-medium text-sm border border-textGreen hover:bg-hoverColor transition duration-300 ease-in-out"
+                    className="text-textGreen px-4 py-2 rounded-md font-medium text-sm border-[1.5px] border-textGreen hover:bg-hoverColor transition duration-300 ease-in-out"
                   >
                     Resume
                   </motion.button>
@@ -238,40 +242,40 @@ const Navbar = () => {
                   className="inline-flex items-center justify-center w-full py-6 gap-4"
                 >
                   <a href="https://github.com/noobmaster432" target="_blank">
-                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <TbBrandGithub />
+                    <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
+                      <TbBrandGithub className="group-hover:scale-110" />
                     </span>
                   </a>
                   <a
                     href="https://www.linkedin.com/in/noobmaster432"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <BiLogoLinkedin />
+                    <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
+                      <BiLogoLinkedin className="group-hover:scale-110" />
                     </span>
                   </a>
                   <a
-                    href="https://leetcode.com/noobmaster_432/"
+                    href="https://leetcode.com/noobmaster_432"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <TbBrandLeetcode />
+                    <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
+                      <TbBrandLeetcode className="group-hover:scale-110" />
                     </span>
                   </a>
                   <a
                     href="https://www.codechef.com/users/noobmaster_432"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <SiCodechef />
+                    <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
+                      <SiCodechef className="group-hover:scale-110" />
                     </span>
                   </a>
                   <a
                     href="https://codeforces.com/profile/noobmaster432"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-1 transition-all duration-300">
-                      <SiCodeforces />
+                    <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
+                      <SiCodeforces className="group-hover:scale-110" />
                     </span>
                   </a>
                 </motion.div>
