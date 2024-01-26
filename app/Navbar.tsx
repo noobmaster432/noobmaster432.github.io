@@ -49,66 +49,85 @@ const Navbar = () => {
             <Link
               href="#home"
               onClick={handleScroll}
-              className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
+              className="nav-link mt-2 text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1 }}
               >
-                Home
+                <span className="inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
+                  Home
+                  <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
+                </span>
               </motion.li>
             </Link>
             <Link
               href="#about"
               onClick={handleScroll}
-              className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
+              className="nav-link mt-2 text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.1 }}
               >
-                <span className="text-textGreen">01.</span>About
+                <span className="text-textGreen">01.</span>
+                <span className="inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
+                  About
+                  <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
+                </span>
               </motion.li>
             </Link>
             <Link
               href="#experience"
               onClick={handleScroll}
-              className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
+              className="nav-link mt-2 text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
               >
-                <span className="text-textGreen">02.</span>Experience
+                <span className="text-textGreen">02.</span>
+                <span className="inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
+                  Experience
+                  <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
+                </span>
               </motion.li>
             </Link>
             <Link
               href="#projects"
               onClick={handleScroll}
-              className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
+              className="nav-link mt-2 text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
               >
-                <span className="text-textGreen">03.</span>Projects
+                <span className="text-textGreen">03.</span>
+                <span className="inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
+                  Projects
+                  <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
+                </span>
               </motion.li>
             </Link>
             <Link
               href="#contact"
               onClick={handleScroll}
-              className="nav-link text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
+              className="nav-link mt-2 text-textDark hover:text-textGreen font-medium flex items-center gap-1 transition duration-300 ease-in-out"
             >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
               >
-                <span className="text-textGreen">04.</span>Contact
+                <span className="text-textGreen">04.</span>
+                <span className="inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
+                  Contact
+                  <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
+                </span>
               </motion.li>
             </Link>
           </ul>
@@ -254,10 +273,7 @@ const Navbar = () => {
                       <BiLogoLinkedin className="group-hover:scale-110" />
                     </span>
                   </a>
-                  <a
-                    href="https://leetcode.com/noobmaster_432"
-                    target="_blank"
-                  >
+                  <a href="https://leetcode.com/noobmaster_432" target="_blank">
                     <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
                       <TbBrandLeetcode className="group-hover:scale-110" />
                     </span>

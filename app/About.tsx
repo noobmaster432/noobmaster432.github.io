@@ -6,6 +6,7 @@ import { about, skills } from "./data";
 import { useState } from "react";
 
 const About = () => {
+  let d = 0.1;
   const [fieldType, setFieldType] = useState("languages" as string);
   return (
     <section
@@ -23,7 +24,9 @@ const About = () => {
             {about.map((a, id) => (
               <p key={id}>{a.description}</p>
             ))}
-            <h1 className="mt-8 ml-2 mb-2 text-xl font-bold text-textLight">SKILLS</h1>
+            <h1 className="mt-8 ml-2 mb-2 text-xl font-bold text-textLight">
+              SKILLS
+            </h1>
             <div className="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
               <button
                 onClick={() => setFieldType("languages")}
@@ -61,16 +64,21 @@ const About = () => {
               {skills.map(
                 (s, id) =>
                   fieldType === s.field && (
-                    <div key={id}>
+                    <motion.div
+                      key={id}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: (d += 0.05) }}
+                    >
                       <Image
                         src={s.image}
                         alt={s.name}
-                        className="w-16 h-16 md:w-24 md:h-24 hover:scale-105 cursor-pointer shadow-md object-contain"
+                        className="w-16 h-16 md:w-24 md:h-24 hover:scale-105 cursor-pointer shadow-md object-contain mx-auto"
                       />
                       <h1 className="text-center text-sm md:text-base text-textLight">
                         {s.name}
                       </h1>
-                    </div>
+                    </motion.div>
                   )
               )}
             </div>
