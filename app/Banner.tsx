@@ -24,12 +24,7 @@ const Banner = () => {
         Gyanendra Tiwari.{" "}
         <span className="text-textDark mt-2 lgl:mt-4">
           <TypeAnimation
-            sequence={[
-              "I build things for the web.",
-              1000,
-              "I Turn Puzzles to Programs.",
-              1000,
-            ]}
+            sequence={[ "DEVELOPER... ", 2000, "DEBUGGER... ", 2000, "DEBUTANTE... ", 2000, "DISRUPTOR... ", 2000 ]}
             wrapper="span"
             speed={25}
             repeat={Infinity}
@@ -63,7 +58,7 @@ const Banner = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
-          className="py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm font-sans border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
+          className="py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm font-sans border-[1.3px] border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
         >
           Check out my Projects!
         </motion.button>

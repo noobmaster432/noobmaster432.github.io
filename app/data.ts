@@ -1,5 +1,23 @@
 import { filmfiesta, buzznet, nivaas } from "@/public/assets";
 
+const about = [
+  {
+    id: 1,
+    description:
+      "Hello there!👋 I'm a Full Stack Developer with a knack for Competitive Programming and a pre-final year BTech undergrad at the Indian Institute of Information Technology (IIIT) Ranchi!🎓",
+  },
+  {
+    id: 2,
+    description:
+      "I love long walks with music on🎧, writing clean code, and pushing my skills to the limit. My interests include joining an exciting team of passionate people, personal growth, and making silly faces.",
+  },
+  {
+    id: 3,
+    description:
+      "Beyond my technical skills, I bring humor to the table. A good laugh can create a positive work environment and foster creativity.",
+  },
+];
+
 const projects = [
   {
     id: 1,
@@ -9,7 +27,7 @@ const projects = [
     image: filmfiesta,
     link: "https://film-fiesta.vercel.app/",
     github: "https://github.com/noobmaster432/FilmFiesta",
-    tech: ["Reactjs", "Redux", "Material UI", "Node.js", "MongoDB", "TMDB API"],
+    tech: ["React.js", "Redux", "Material UI", "Node.js", "MongoDB", "TMDB API"],
   },
   {
     id: 2,
@@ -19,14 +37,7 @@ const projects = [
     image: buzznet,
     link: "https://buzznet-tweet.vercel.app/",
     github: "https://github.com/noobmaster432/buzznet",
-    tech: [
-      "Next.JS",
-      "Zustand",
-      "Tailwind CSS",
-      "TypeScript",
-      "Prisma",
-      "MongoDB",
-    ],
+    tech: ["Next.js", "Zustand", "Tailwind CSS", "TypeScript", "Prisma", "MongoDB"],
   },
   {
     id: 3,
@@ -36,7 +47,7 @@ const projects = [
     image: nivaas,
     link: "https://nivaas.vercel.app/",
     github: "https://github.com/noobmaster432/nivaas",
-    tech: ["Reactjs", "Material UI", "Cloudinary", "TypeScript", "MongoDB"],
+    tech: ["React.js", "Material UI", "Cloudinary", "TypeScript", "MongoDB"],
   },
 ];
 
@@ -45,19 +56,19 @@ const archives = [
     id: 1,
     name: "Whisper",
     description:
-      "A feature-rich Full Stack Chat application that brings you a seamless messaging experience. Whisper offers real-time chat functionality, voice notes, emoji support, video calls, voice calls, and a plethora of other features. ",
+      "A tech-forward Chat application that offers Unified live communication features, voice and video calls, live audio waveforms for voice notes, emoji support, image sharing and seamless real-time messaging through socket.io",
     link: "https://whisper-buzz.vercel.app/",
     github: "https://github.com/noobmaster432/whisper",
-    tech: ["Nextjs", "Node.js", "Socket-io"],
+    tech: ["Next.js", "Node.js", "Socket-io"],
   },
   {
     id: 2,
     name: "Project Pilot",
     description:
-      "A project management system that provides streamlined and effective project management tools like Kanban features for monitoring progress, a Calendar for scheduling, and Conversations as a discussion forum.",
+      "An innovative project management system accompanied by Github repository integration and incorporated with Kanban features for tracking progress, Calendar for scheduling, and Conversations as a discussion platform",
     link: "https://project-pilot-ten.vercel.app/",
     github: "https://github.com/noobmaster432/ProjectPilot",
-    tech: ["Reactjs", "Node.js", "Zustand"],
+    tech: ["React.js", "Node.js", "Zustand"],
   },
   {
     id: 3,
@@ -66,7 +77,7 @@ const archives = [
       "An Airbnb clone featuring a date and calendar booking functionality, a fast search functionality, UI/UX design with Tailwind CSS, Mapbox integration for listing locations, and a backend with data relationships managed using Sanity Studio.",
     link: "https://yaatra.vercel.app/",
     github: "https://github.com/noobmaster432/yaatra",
-    tech: ["Next.js", "Tailwind CSS", "Sanity Studio"],
+    tech: ["Next.js", "Tailwind CSS", "Sanity"],
   },
   {
     id: 4,
@@ -75,7 +86,7 @@ const archives = [
       "A full-stack social media application which allows users to share their experiences by posting pictures along with captivating stories, and other users can interact with these posts by liking and commenting on them.",
     link: "https://picture-book-iiitr.vercel.app/",
     github: "https://github.com/gdsciiitr/pics_palette",
-    tech: ["Reactjs", "Node.js", "Redux"],
+    tech: ["React.js", "Node.js", "Redux"],
   },
   {
     id: 5,
@@ -84,7 +95,7 @@ const archives = [
       "A Real-Time News Application featuring dynamic data handling, dark mode, searching capabilities, pulling data from MediaStack News API, using Stepzen to launch a GraphQL interface and using TypeScript for fewer bugs and errors.",
     link: "https://the-illuminate.vercel.app/",
     github: "https://github.com/noobmaster432/the-illuminate",
-    tech: ["Next.js", "MediaStack API", "Stepzen"],
+    tech: ["Next.js", "MediaStack", "Stepzen"],
   },
   {
     id: 6,
@@ -93,7 +104,7 @@ const archives = [
       "A Realtime private chat web application built using React and Firebase. It provides users with a secure authentication, real-time updates of chat messages, and seamless chatting experience to communicate in real time.",
     link: "https://baatchit-nb.vercel.app/",
     github: "https://github.com/noobmaster432/BaatChit",
-    tech: ["Reactjs", "Firebase", "SaSS"],
+    tech: ["React.js", "Firebase", "SaSS"],
   },
   {
     id: 7,
@@ -111,7 +122,7 @@ const archives = [
       "An Artificial Intelligence News Application that utilizes Alan AI for speech recognition, pulling data from News API and Material-UI for the user interface. The application enables users to control every aspect of the app using just their voice.",
     link: "https://khabr-ai.netlify.app/",
     github: "https://github.com/noobmaster432/khabrAI",
-    tech: ["Reactjs", "Material UI", "Alan AI"],
+    tech: ["React.js", "Alan AI", "Material UI"],
   },
 ];
 
@@ -122,9 +133,9 @@ const experience = [
     company: "Coforge",
     duration: "May 2023 - Jul 2023",
     points: [
-      "Pioneered the comprehensive development and enhancement of a modern Dashboarding and Reporting Tool using Ruby on Rails and MySQL, resulting in a significant boost in data analysis efficiency.",
-      "Amplified data exploration capabilities through the implementation of interactive dashboards and dynamic data visualizations.",
-      "Streamlined application performance and scalability by employing efficient code execution and caching techniques, leading to a substantial reduction in page load time.",
+      "Significantly contributed to the development of a sophisticated Dashboarding and Reporting Tool using Ruby on Rails and MySQL.",
+      "Improved data analysis efficiency by creating interactive dashboards and dynamic visualizations for easier exploration.",
+      "Boosted application performance and scalability through caching, leading to reduced page load times.",
     ],
   },
   {
@@ -133,11 +144,11 @@ const experience = [
     company: "GDSC IIITR",
     duration: "Dec 2022 - Aug 2023",
     points: [
-      "Skillfully curated and led engaging workshops and training sessions on JavaScript, React.js, and GitHub.",
-      "Developed and delivered high-quality web applications utilizing modern technologies.",
-      "Provided valuable guidance and support to club members, offering coding best practices and troubleshooting code issues to foster a collaborative and proficient learning environment",
+      "Conducted 3+ workshops and training sessions on web development topics, including JavaScript and GitHub.",
+      "Organized inaugural college-level hackathon leveraging Google technologies to address real-world challenges.",
+      "Offered valuable guidance and support to club members, sharing coding best practices and resolving code-related challenges.",
     ],
   },
 ];
 
-export { projects, archives, experience };
+export { projects, archives, experience, about };
