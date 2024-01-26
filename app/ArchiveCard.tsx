@@ -38,11 +38,11 @@ const ArchiveCard = ({name, description, link, github, tech}: ArchiveCardProps) 
         </h3>
         <p className="text-sm mt-3">{description}</p>
       </div>
-      <ul className="text-xs mdl:text-sm flex gap justify-between items-center text-textDark flex-wrap">
+      <ul className="text-xs mdl:text-sm space-y-1 flex gap justify-between items-center text-textDark flex-wrap">
         {tech.map((t, index) => (
           <li
             key={index}
-            className="w-fit text-textLight bg-[#1b3666] hover:bg-[#254a8c] px-2 py-1 rounded-2xl cursor-pointer"
+            className="w-fit text-textLight bg-[#1b3666] hover:bg-[#254a8c] px-2 py-1 rounded-md cursor-pointer"
           >
             {t}
           </li>

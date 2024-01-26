@@ -7,9 +7,9 @@ const Archive = () => {
     let d = 0.1;
     const [Show, setShow] = useState(false);
   return (
-    <div className="max-w-contentContainer mx-auto px-12 py-16">
+    <div className="max-w-contentContainer mx-auto px-2 sm:px-4 sml:px-12 py-16">
       <div className="w-full flex flex-col items-center">
-        <h2 className="font-sans font-semibold text-3xl">
+        <h2 className="font-sans text-center font-semibold text-3xl">
           Other Noteworthy Projects
         </h2>
         <p className="text-sm font-sans text-textGreen">view the archive</p>

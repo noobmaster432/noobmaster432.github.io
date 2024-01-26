@@ -1,4 +1,5 @@
 import { filmfiesta, buzznet, nivaas } from "@/public/assets";
+import { html, css, js, react, ts, node, mongo, git, cpp, nextjs, tailwind, zustand, python, mysql, redux, express, vs, github, postman, ruby, linux } from "@/public/assets/skills";
 
 const about = [
   {
@@ -15,6 +16,135 @@ const about = [
     id: 3,
     description:
       "Beyond my technical skills, I bring humor to the table. A good laugh can create a positive work environment and foster creativity.",
+  },
+];
+
+const skills = [
+  {
+    id: 1,
+    name: "HTML",
+    image: html,
+    field: "languages",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    image: css,
+    field: "languages",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    image: js,
+    field: "languages",
+  },
+  {
+    id: 4,
+    name: "TypeScript",
+    image: ts,
+    field: "languages",
+  },
+  {
+    id: 5,
+    name: "C++",
+    image: cpp,
+    field: "languages",
+  },
+  {
+    id: 6,
+    name: "Python",
+    image: python,
+    field: "languages",
+  },
+  {
+    id: 7,
+    name: "Ruby",
+    image: ruby,
+    field: "languages",
+  },
+  {
+    id: 8,
+    name: "React.js",
+    image: react,
+    field: "frameworks",
+  },
+  {
+    id: 9,
+    name: "Node.js",
+    image: node,
+    field: "frameworks",
+  },
+  {
+    id: 10,
+    name: "Next.js",
+    image: nextjs,
+    field: "frameworks",
+  },
+  {
+    id: 11,
+    name: "Express.js",
+    image: express,
+    field: "frameworks",
+  },
+  {
+    id: 12,
+    name: "Tailwind CSS",
+    image: tailwind,
+    field: "frameworks",
+  },
+  {
+    id: 13,
+    name: "Redux",
+    image: redux,
+    field: "frameworks",
+  },
+  {
+    id: 14,
+    name: "Zustand",
+    image: zustand,
+    field: "frameworks",
+  },
+  {
+    id: 15,
+    name: "Linux",
+    image: linux,
+    field: "others",
+  },
+  {
+    id: 16,
+    name: "Git",
+    image: git,
+    field: "others",
+  },
+  {
+    id: 17,
+    name: "GitHub",
+    image: github,
+    field: "others",
+  },
+  {
+    id: 18,
+    name: "VS Code",
+    image: vs,
+    field: "others",
+  },
+  {
+    id: 19,
+    name: "Postman",
+    image: postman,
+    field: "others",
+  },
+  {
+    id: 20,
+    name: "MongoDB",
+    image: mongo,
+    field: "others",
+  },
+  {
+    id: 21,
+    name: "MySQL",
+    image: mysql,
+    field: "others",
   },
 ];
 
@@ -151,4 +281,4 @@ const experience = [
   },
 ];
 
-export { projects, archives, experience, about };
+export { projects, archives, experience, about, skills };
