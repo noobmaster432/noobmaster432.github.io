@@ -259,17 +259,28 @@ const archives = [
 const experience = [
   {
     id: 1,
-    name: "Software Developer Intern",
-    company: "Coforge",
-    duration: "May 2023 - Jul 2023",
+    name: "Software Developement Engineer Intern",
+    company: "Scaler",
+    duration: "May 2024 - Ongoing",
     points: [
-      "Significantly contributed to the development of a sophisticated Dashboarding and Reporting Tool using Ruby on Rails and MySQL.",
-      "Improved data analysis efficiency by creating interactive dashboards and dynamic visualizations for easier exploration.",
-      "Boosted application performance and scalability through caching, leading to reduced page load times.",
+      "Contributed in the revamping of Scaler Landing Page utilizing Next.js and Tailwind CSS, leading to a significant boost in V2L(Visitors to Lead) conversion rate and improving user engagement and retention metrics.",
+      "Actively participated in Agile sprints and contributed to sprint planning sessions, collaborating closely with UI/UX designers to ensure seamless design implementation and facilitating smooth staging deployments.",
+      "Collaborated with a diverse team to develop clean, maintainable code in Rails with SCSS adhering to the BEM convention for the older version.",
     ],
   },
   {
     id: 2,
+    name: "Software Engineer Intern",
+    company: "Coforge",
+    duration: "May 2023 - Jul 2023",
+    points: [
+      "Contributed to the development of a comprehensive Dashboarding and Reporting Tool utilizing Ruby on Rails and MySQL.",
+      "Resolved numerous UI bugs and engineered reusable, modular UI components with Tailwind CSS, ensuring consistent design and improving user interface reliability.",
+      "Collaborated with a diverse team to implement authentication, authorization, and caching strategies, boosting application efficiency and strengthening data protection.",
+    ],
+  },
+  {
+    id: 3,
     name: "GDSC Core Member",
     company: "GDSC IIITR",
     duration: "Dec 2022 - Aug 2023",
