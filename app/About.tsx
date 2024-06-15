@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
 import { photo } from "@/public/assets";
@@ -70,8 +71,8 @@ const About = () => {
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: (d += 0.05) }}
                     >
-                      <Image
-                        src={s.image}
+                      <img
+                        src={s.image.src}
                         alt={s.name}
                         className="w-16 h-16 md:w-24 md:h-24 hover:scale-105 cursor-pointer shadow-md object-contain mx-auto"
                       />
