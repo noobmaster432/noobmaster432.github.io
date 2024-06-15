@@ -10,7 +10,6 @@ import python from './python.png';
 import git from './git.png';
 import cpp from './s.png';
 import nextjs from './nextjs.png';
-import dev from './dev.png';
 import redux from './redux.png';
 import express from './express.png';
 import tailwind from './tailwind.png';
@@ -21,4 +20,4 @@ import ruby from './ruby.png';
 import linux from './linux.png';
 import zustand from './zustand.png';
 
-export { vs, linux, github, zustand, postman, ruby, html, css, js, react, ts, node, mongo, git, cpp, nextjs, dev, tailwind, mysql, python, redux, express };
+export { vs, linux, github, zustand, postman, ruby, html, css, js, react, ts, node, mongo, git, cpp, nextjs, tailwind, mysql, python, redux, express };
