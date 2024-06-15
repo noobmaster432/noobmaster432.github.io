@@ -33,9 +33,9 @@ const BackToTop = () => {
         <Link
           href="#home"
           onClick={handleScroll}
-          className="z-50 group fixed right-20 bottom-4 flex justify-center items-center w-12 h-12 border-2 border-blue-600 rounded-full cursor-pointer hover:bg-hoverColor hover:text-white"
+          className="z-50 group fixed right-20 bottom-4 flex justify-center items-center w-12 h-12 rounded-full cursor-pointer bg-hoverColor hover:bg-iconHover hover:-translate-y-1 transition-transform duration-300"
         >
-          <FaArrowUp className="text-blue-600 group-hover:text-white" />
+          <FaArrowUp className="text-textLight group-hover:text-slate-50" />
         </Link>
       )}
     </>
