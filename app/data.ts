@@ -5,7 +5,7 @@ const about = [
   {
     id: 1,
     description:
-      "Hello there!👋 I'm a Software Engineer with a knack for Competitive Programming and a pre-final year BTech undergrad at the Indian Institute of Information Technology (IIIT) Ranchi!🎓",
+      "Hello there!👋 I'm a Software Engineer with a knack for Competitive Programming and a final year B.Tech. undergrad at the Indian Institute of Information Technology (IIIT) Ranchi!🎓",
   },
   {
     id: 2,
