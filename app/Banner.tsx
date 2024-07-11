@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import Image from "next/image";
-import { cody } from "@/public/assets";
 
 const Banner = () => {
   return (
@@ -76,9 +74,6 @@ const Banner = () => {
           </motion.button>
         </a>
       </div>
-      {/* <div className="hidden lgl:inline-flex w-96">
-        <Image src={cody} alt="" className="w-full h-fit" />
-      </div> */}
     </section>
   );
 };
