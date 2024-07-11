@@ -1,15 +1,15 @@
 "use client";
-import About from "./About";
-import Archive from "./Archive";
-import BackToTop from "./BackToTop";
-import Banner from "./Banner";
-import Contact from "./Contact";
-import Experience from "./Experience";
-import Footer from "./Footer";
-import LeftSide from "./LeftSide";
-import Navbar from "./Navbar";
-import Projects from "./Projects";
-import RightSide from "./RightSide";
+import About from "./components/sections/About";
+import Archive from "./components/sections/Archive";
+import BackToTop from "./components/ui/BackToTop";
+import Banner from "./components/sections/Banner";
+import Contact from "./components/sections/Contact";
+import Experience from "./components/sections/Experience";
+import Footer from "./components/sections/Footer";
+import LeftSide from "./components/sections/LeftSide";
+import Navbar from "./components/sections/Navbar";
+import Projects from "./components/sections/Projects";
+import RightSide from "./components/sections/RightSide";
 import { motion } from "framer-motion";
 
 export default function Home() {

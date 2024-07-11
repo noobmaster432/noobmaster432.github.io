@@ -1,7 +1,7 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
-import { projects } from "./data";
-import ProjectCard from "./ProjectCard";
+import SectionTitle from "../ui/SectionTitle";
+import { projects } from "../data/data";
+import ProjectCard from "../ui/ProjectCard";
 import { motion } from "framer-motion";
 
 const Projects = () => {

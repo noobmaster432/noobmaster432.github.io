@@ -273,7 +273,7 @@ const Navbar = () => {
                       <BiLogoLinkedin className="group-hover:scale-110" />
                     </span>
                   </a>
-                  <a href="https://leetcode.com/noobmaster_432" target="_blank">
+                  <a href="https://leetcode.com/noobmaster432" target="_blank">
                     <span className="w-10 h-10 text-xl bg-hoverColor hover:bg-iconHover rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer group hover:-translate-y-1 transition-transform duration-300">
                       <TbBrandLeetcode className="group-hover:scale-110" />
                     </span>

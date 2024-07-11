@@ -1,7 +1,7 @@
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 import { useState } from "react";
-import { experience } from "./data";
-import Company from "./Company";
+import { experience } from "../data/data";
+import Company from "../ui/Company";
 import { motion } from "framer-motion";
 
 const Experience = () => {

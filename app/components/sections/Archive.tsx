@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import ArchiveCard from "./ArchiveCard";
-import { archives } from "./data";
+import ArchiveCard from "../ui/ArchiveCard";
+import { archives } from "../data/data";
 import { useState } from "react";
 
 const Archive = () => {
-    let d = 0.1;
-    const [Show, setShow] = useState(false);
+  let d = 0.1;
+  const [Show, setShow] = useState(false);
   return (
     <div className="max-w-contentContainer mx-auto px-2 sm:px-4 sml:px-12 py-16">
       <div className="w-full flex flex-col items-center">
@@ -31,22 +31,23 @@ const Archive = () => {
             />
           </motion.div>
         ))}
-        {Show && ( archives.slice(3, 8).map((a) => (
-          <motion.div
-            key={a.id}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: (d += 0.1) }}
-          >
-            <ArchiveCard
-              name={a.name}
-              description={a.description}
-              link={a.link}
-              github={a.github}
-              tech={a.tech}
-            />
-          </motion.div>
-        )))}
+        {Show &&
+          archives.slice(3, 8).map((a) => (
+            <motion.div
+              key={a.id}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: (d += 0.1) }}
+            >
+              <ArchiveCard
+                name={a.name}
+                description={a.description}
+                link={a.link}
+                github={a.github}
+                tech={a.tech}
+              />
+            </motion.div>
+          ))}
       </div>
       <div className="mt-12 flex items-center justify-center">
         <button

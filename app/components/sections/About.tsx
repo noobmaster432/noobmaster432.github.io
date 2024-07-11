@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 import Image from "next/image";
 import { photo } from "@/public/assets";
 import { motion } from "framer-motion";
-import { about, skills } from "./data";
+import { about, skills } from "../data/data";
 import { useState } from "react";
 
 const About = () => {
