@@ -24,7 +24,7 @@ const Experience = () => {
                 active === 1
                   ? "border-l-textGreen text-textGreen"
                   : "border-l-hoverColor text-textDark"
-              } text-textDark bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+              } bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
             >
               Scaler
             </li>
@@ -37,16 +37,6 @@ const Experience = () => {
               } bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
             >
               Coforge
-            </li>
-            <li
-              onClick={() => setActive(3)}
-              className={`border-l-2 ${
-                active === 3
-                  ? "border-l-textGreen text-textGreen"
-                  : "border-l-hoverColor text-textDark"
-              }  bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
-            >
-              GDSC
             </li>
           </ul>
 

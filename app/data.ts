@@ -261,35 +261,36 @@ const experience = [
     id: 1,
     name: "Software Developement Engineer Intern",
     company: "Scaler",
-    duration: "May 2024 - Ongoing",
+    duration: "May 2024 - Jul 2024",
     points: [
-      "Contributed in the revamping of Scaler Landing Page utilizing Next.js and Tailwind CSS, leading to a significant boost in V2L(Visitors to Lead) conversion rate and improving user engagement and retention metrics.",
+      "Developed and maintained Scaler Landing Page, revamping it with Next.js and Tailwind CSS, which led to a 2.5% increase in the V2L (Visitor to Lead) conversion rate and a notable 5.4% improvement in user engagement and retention metrics.",
       "Actively participated in Agile sprints and contributed to sprint planning sessions, collaborating closely with UI/UX designers to ensure seamless design implementation and facilitating smooth staging deployments.",
-      "Collaborated with a diverse team to develop clean, maintainable code in Rails with SCSS adhering to the BEM convention for the older version.",
+      "Implemented tracking using Google Tag Manager across the landing page to monitor visitor metrics, clicks, and leads for comprehensive analytics.",
+      "Continuously monitored and analyzed application performance using tools like Google Lighthouse, improved desktop performance scores from 40 to 82 and mobile performance scores from 30 to 70 by implementing browser and server-side caching, optimizing images with Sharp and Next/Image, and leveraging SSR (Server-Side Rendering) for enhanced page load times.",
     ],
   },
   {
     id: 2,
-    name: "Software Engineer Intern",
+    name: "Software Developer Intern",
     company: "Coforge",
     duration: "May 2023 - Jul 2023",
     points: [
       "Contributed to the development of a comprehensive Dashboarding and Reporting Tool utilizing Ruby on Rails and MySQL.",
-      "Resolved numerous UI bugs and engineered reusable, modular UI components with Tailwind CSS, ensuring consistent design and improving user interface reliability.",
-      "Collaborated with a diverse team to implement authentication, authorization, and caching strategies, boosting application efficiency and strengthening data protection.",
+      "Resolved numerous UI bugs, engineered reusable and modular UI components using Tailwind CSS, integrated Chart.js for data visualization, and implemented paging and filters to ensure design consistency and enhance user interface reliability.",
+      "Collaborated cross-functionally to architect clean, maintainable code while implementing authentication, authorization, and caching strategies, thereby enhancing application efficiency and stronger data security.",
     ],
   },
-  {
-    id: 3,
-    name: "GDSC Core Member",
-    company: "GDSC IIITR",
-    duration: "Dec 2022 - Aug 2023",
-    points: [
-      "Conducted 3+ workshops and training sessions on web development topics, including JavaScript and GitHub.",
-      "Organized inaugural college-level hackathon leveraging Google technologies to address real-world challenges.",
-      "Offered valuable guidance and support to club members, sharing coding best practices and resolving code-related challenges.",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   name: "GDSC Core Member",
+  //   company: "GDSC IIITR",
+  //   duration: "Dec 2022 - Aug 2023",
+  //   points: [
+  //     "Conducted 3+ workshops and training sessions on web development topics, including JavaScript and GitHub.",
+  //     "Organized inaugural college-level hackathon leveraging Google technologies to address real-world challenges.",
+  //     "Offered valuable guidance and support to club members, sharing coding best practices and resolving code-related challenges.",
+  //   ],
+  // },
 ];
 
 export { projects, archives, experience, about, skills };

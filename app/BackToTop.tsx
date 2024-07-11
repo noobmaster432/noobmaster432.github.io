@@ -31,7 +31,7 @@ const BackToTop = () => {
     <>
       {visible && (
         <Link
-          href="#home"
+          href="#"
           onClick={handleScroll}
           className="hidden z-50 group fixed right-20 bottom-4 lgl:flex justify-center items-center w-12 h-12 rounded-full cursor-pointer bg-hoverColor hover:bg-iconHover hover:-translate-y-1 transition-transform duration-300"
         >
