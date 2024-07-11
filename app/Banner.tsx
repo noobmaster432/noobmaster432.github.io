@@ -76,9 +76,9 @@ const Banner = () => {
           </motion.button>
         </a>
       </div>
-      <div className="hidden lgl:inline-flex w-96">
+      {/* <div className="hidden lgl:inline-flex w-96">
         <Image src={cody} alt="" className="w-full h-fit" />
-      </div>
+      </div> */}
     </section>
   );
 };
