@@ -56,7 +56,7 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
             {tech.map((t, index) => (
               <li
                 key={index}
-                className="w-fit text-textLight bg-[#112445] hover:bg-[#22447e] px-2 py-1 rounded-md cursor-pointer"
+                className="w-fit text-textLight bg-hoverColor hover:bg-[#64ffdb2f] duration-700 px-2 py-1 rounded-md cursor-pointer"
               >
                 {t}
               </li>
@@ -66,14 +66,14 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
             <a
               href={github}
               target="_blank"
-              className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-110"
+              className="hover:text-textGreen text-textDark duration-500 w-fit hover:scale-110"
             >
               <TbBrandGithub />
             </a>
             <a
               href={link}
               target="_blank"
-              className="hover:text-textGreen text-textDark duration-300 w-fit hover:scale-110"
+              className="hover:text-textGreen text-textDark duration-500 w-fit hover:scale-110"
             >
               <RxOpenInNewWindow />
             </a>
