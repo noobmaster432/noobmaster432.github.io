@@ -48,7 +48,7 @@ const About = () => {
                     fieldType === "languages"
                       ? "bg-hoverColor text-white"
                       : "bg-transparent text-textDark"
-                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
+                  } hover:bg-[#64ffdb2f] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
                 >
                   Languages
                 </button>
@@ -58,7 +58,7 @@ const About = () => {
                     fieldType === "frameworks"
                       ? "bg-hoverColor text-white"
                       : "bg-transparent text-textDark"
-                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md flex font-medium duration-300`}
+                  } hover:bg-[#64ffdb2f] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md flex font-medium duration-300`}
                 >
                   Frameworks <span className="hidden md:flex">/Libraries</span>
                 </button>
@@ -68,7 +68,7 @@ const About = () => {
                     fieldType === "others"
                       ? "bg-hoverColor text-white"
                       : "bg-transparent text-textDark"
-                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
+                  } hover:bg-[#64ffdb2f] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
                 >
                   <span className="hidden md:flex">Other Technologies</span>
                   <span className="flex md:hidden">Others</span>

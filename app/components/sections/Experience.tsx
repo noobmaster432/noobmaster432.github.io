@@ -9,7 +9,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="max-w-containerxs mx-auto py-10 lgl:py-12 px-4 scroll-m-14"
+      className="max-w-[900px] mx-auto py-10 lgl:py-12 px-4 scroll-m-14"
     >
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
@@ -22,9 +22,9 @@ const Experience = () => {
               onClick={() => setActive(1)}
               className={`border-l-2 ${
                 active === 1
-                  ? "border-l-textGreen text-textGreen"
-                  : "border-l-hoverColor text-textDark"
-              } bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+                  ? "border-l-textGreen text-textGreen bg-[#112240]"
+                  : "border-l-hoverColor text-textDark bg-transparent"
+              } hover:bg-[#162c52e3] hover:text-textGreen py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
             >
               Scaler
             </li>
@@ -32,9 +32,9 @@ const Experience = () => {
               onClick={() => setActive(2)}
               className={`border-l-2 ${
                 active === 2
-                  ? "border-l-textGreen text-textGreen"
-                  : "border-l-hoverColor text-textDark"
-              } bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+                  ? "border-l-textGreen text-textGreen bg-[#112240]"
+                  : "border-l-hoverColor text-textDark bg-transparent"
+              } hover:bg-[#162c52] hover:text-textGreen py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
             >
               Coforge
             </li>
