@@ -23,15 +23,15 @@ const ProjectCard = ({id, name, description, image, github, link, tech}: project
         <a
           href={link}
           target="_blank"
-          className="w-full hover:scale-[1.01] lgl:w-1/2 hover:shadow-2xl h-auto relative group"
+          className="w-full hover:scale-[1.01] duration-700 ease-in-out lgl:w-1/2 hover:shadow-2xl h-auto relative group"
         >
           <div>
             <Image
-              className="w-full h-full object-contain rounded-md shadow-lg "
+              className="w-full h-full object-contain rounded-md shadow-lg"
               src={image}
               alt={name}
             />
-            <div className="absolute w-full h-full bg-black opacity-20 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
+            <div className="absolute w-full h-full bg-black opacity-20 rounded-lg top-0 left-0 group-hover:bg-transparent duration-700"></div>
           </div>
         </a>
         <div

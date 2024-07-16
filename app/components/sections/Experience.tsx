@@ -24,7 +24,7 @@ const Experience = () => {
                 active === 1
                   ? "border-l-textGreen text-textGreen bg-[#112240]"
                   : "border-l-hoverColor text-textDark bg-transparent"
-              } hover:bg-[#162c52e3] hover:text-textGreen py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+              } hover:bg-[#172c51] hover:text-textGreen py-3 text-sm cursor-pointer duration-500 px-8 font-medium rounded-r-md`}
             >
               Scaler
             </li>
@@ -34,7 +34,7 @@ const Experience = () => {
                 active === 2
                   ? "border-l-textGreen text-textGreen bg-[#112240]"
                   : "border-l-hoverColor text-textDark bg-transparent"
-              } hover:bg-[#162c52] hover:text-textGreen py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+              } hover:bg-[#172c51] hover:text-textGreen py-3 text-sm cursor-pointer duration-500 px-8 font-medium rounded-r-md`}
             >
               Coforge
             </li>
