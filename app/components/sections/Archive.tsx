@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ArchiveCard from "../ui/ArchiveCard";
-import { archives } from "../data/data";
+import { archives } from "../../utils/data";
 import { useState } from "react";
 
 const Archive = () => {

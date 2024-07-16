@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../ui/SectionTitle";
-import { projects } from "../data/data";
+import { projects } from "../../utils/data";
 import ProjectCard from "../ui/ProjectCard";
 import { motion } from "framer-motion";
 

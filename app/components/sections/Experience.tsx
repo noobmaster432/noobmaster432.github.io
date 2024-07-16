@@ -1,6 +1,6 @@
 import SectionTitle from "../ui/SectionTitle";
 import { useState } from "react";
-import { experience } from "../data/data";
+import { experience } from "../../utils/data";
 import Company from "../ui/Company";
 import { motion } from "framer-motion";
 

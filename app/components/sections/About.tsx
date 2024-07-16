@@ -2,8 +2,8 @@
 import SectionTitle from "../ui/SectionTitle";
 import Image from "next/image";
 import { photo } from "@/public/assets";
-import { motion } from "framer-motion";
-import { about, skills } from "../data/data";
+import { AnimatePresence, motion } from "framer-motion";
+import { about, skills } from "../../utils/data";
 import { useState } from "react";
 
 const About = () => {
@@ -28,39 +28,53 @@ const About = () => {
             <h1 className="mt-8 ml-2 mb-2 text-xl font-bold text-textLight">
               SKILLS
             </h1>
-            <div className="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
-              <button
-                onClick={() => setFieldType("languages")}
-                className={`${
-                  fieldType === "languages"
-                    ? "bg-indigo-900 text-white"
-                    : "bg-transparent text-textDark"
-                } px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
+            <AnimatePresence>
+              <motion.div
+                layoutId="hoverBackground"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+                className="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base"
               >
-                Languages
-              </button>
-              <button
-                onClick={() => setFieldType("frameworks")}
-                className={`${
-                  fieldType === "frameworks"
-                    ? "bg-indigo-900 text-white"
-                    : "bg-transparent text-textDark"
-                } px-2 py-1 md:px-4 md:py-2 rounded-md flex font-medium duration-300`}
-              >
-                Frameworks <span className="hidden md:flex">/Libraries</span>
-              </button>
-              <button
-                onClick={() => setFieldType("others")}
-                className={`${
-                  fieldType === "others"
-                    ? "bg-indigo-900 text-white"
-                    : "bg-transparent text-textDark"
-                } px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
-              >
-                <span className="hidden md:flex">Other Technologies</span>
-                <span className="flex md:hidden">Others</span>
-              </button>
-            </div>
+                <button
+                  onClick={() => setFieldType("languages")}
+                  className={`${
+                    fieldType === "languages"
+                      ? "bg-hoverColor text-white"
+                      : "bg-transparent text-textDark"
+                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
+                >
+                  Languages
+                </button>
+                <button
+                  onClick={() => setFieldType("frameworks")}
+                  className={`${
+                    fieldType === "frameworks"
+                      ? "bg-hoverColor text-white"
+                      : "bg-transparent text-textDark"
+                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md flex font-medium duration-300`}
+                >
+                  Frameworks <span className="hidden md:flex">/Libraries</span>
+                </button>
+                <button
+                  onClick={() => setFieldType("others")}
+                  className={`${
+                    fieldType === "others"
+                      ? "bg-hoverColor text-white"
+                      : "bg-transparent text-textDark"
+                  } hover:bg-[#64ffdb2e] hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-md font-medium duration-300`}
+                >
+                  <span className="hidden md:flex">Other Technologies</span>
+                  <span className="flex md:hidden">Others</span>
+                </button>
+              </motion.div>
+            </AnimatePresence>
             <div className="flex flex-wrap gap-4">
               {skills.map(
                 (s, id) =>
@@ -74,7 +88,7 @@ const About = () => {
                       <img
                         src={s.image.src}
                         alt={s.name}
-                        className="w-16 h-16 md:w-24 md:h-24 hover:scale-105 cursor-pointer shadow-md object-contain mx-auto"
+                        className="w-16 h-16 md:w-24 md:h-24 duration-500 ease-in-out hover:scale-105 transition-transform cursor-pointer shadow-md object-contain mx-auto"
                       />
                       <h1 className="text-center text-sm md:text-base text-textLight">
                         {s.name}
