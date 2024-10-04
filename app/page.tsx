@@ -1,7 +1,6 @@
 "use client";
 import About from "./components/sections/About";
 import Archive from "./components/sections/Archive";
-import BackToTop from "./components/ui/BackToTop";
 import Banner from "./components/sections/Banner";
 import Contact from "./components/sections/Contact";
 import Experience from "./components/sections/Experience";
@@ -13,11 +12,11 @@ import RightSide from "./components/sections/RightSide";
 import { motion } from "framer-motion";
 
 export default function Home() {
+  
   return (
-    <main className="w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60">
+    <main className="w-full pt-12 bg-bodyColor text-textLight overflow-x-hidden">
       <Navbar />
-      <BackToTop />
-      <div className="w-full h-[88vh] xl:flex items-center gap-20 justify-between">
+      <div className="w-full xl:flex items-center gap-20 justify-between">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -26,7 +25,7 @@ export default function Home() {
         >
           <LeftSide />
         </motion.div>
-        <div className="mx-auto w-full p-4 h-[88vh]">
+        <div className="mx-auto w-full p-4 ">
           <Banner />
           <About />
           <Experience />
@@ -39,7 +38,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0 }}
-          className="hidden xl:inline-flex w-28 h-full fixed right-0 bottom-3"
+          className="hidden xl:inline-flex w-20 h-full fixed right-0 bottom-3"
         >
           <RightSide />
         </motion.div>

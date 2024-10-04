@@ -2,11 +2,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Gyan } from "@/public/assets";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {MdOutlineClose} from "react-icons/md";
 import { TbBrandGithub, TbBrandLeetcode } from "react-icons/tb";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { SiCodechef, SiCodeforces } from "react-icons/si";
+import BackToTop from "../ui/BackToTop";
 
 const Navbar = () => {
   const ref = useRef<string | any>("");
@@ -34,8 +35,25 @@ const Navbar = () => {
     }
   }
 
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleScrollVisible = () => {
+      if (window.scrollY > 100) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollVisible);
+    return () => {
+      window.removeEventListener("scroll", handleScrollVisible);
+    };
+  }, []);
+
   return (
-    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-8">
+    <div className="fixed w-screen shadow-navbarShadow h-20 lg:h-[12vh] top-0 z-50 bg-bodyColor pl-8 pr-12">
+      {visible && <BackToTop />}
       <div className="max-w-container h-full mx-auto py-1 font-sans flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0 }}

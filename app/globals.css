@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  @apply scrollbar scrollbar-track-[#233149] scrollbar-thumb-[#606c87];
+}
+
 .active {
   color: #64ffda;
+}
+
+html {
+  scroll-behavior: smooth;
 }
