@@ -263,10 +263,10 @@ const experience = [
     company: "Scaler",
     duration: "May 2024 - Jul 2024",
     points: [
-      "Developed and maintained Scaler Landing Page, revamping it with Next.js and Tailwind CSS, which led to a 2.5% increase in the V2L (Visitor to Lead) conversion rate and a notable 5.4% improvement in user engagement and retention metrics.",
-      "Actively participated in Agile sprints and contributed to sprint planning sessions, collaborating closely with UI/UX designers to ensure seamless design implementation and facilitating smooth staging deployments.",
-      "Implemented tracking using Google Tag Manager across the landing page to monitor visitor metrics, clicks, and leads for comprehensive analytics.",
-      "Continuously monitored and analyzed application performance using tools like Google Lighthouse, improved desktop performance scores from 40 to 82 and mobile performance scores from 30 to 70 by implementing browser and server-side caching, optimizing images with Sharp and Next/Image, and leveraging SSR (Server-Side Rendering) for enhanced page load times.",
+      "Developed and maintained Scaler Landing Page, revamping it with Next.js and Tailwind CSS, which led to drive a 2.5% boost in V2L (Visitor to Lead) conversions and achieve a 5.4% uplift in user engagement and retention.",
+      "Collaborated with UI/UX designers during Agile sprints, streamlining design updates and ensuring seamless staging deployments.",
+      "Integrated Google Tag Manager across the landing page to track visitor metrics, clicks, and leads, enabling comprehensive data-driven insights for performance analysis.",
+      "Monitored and analyzed application performance using Google Lighthouse, boosting desktop scores from 40 to 82 and mobile scores from 30 to 70 through caching, image optimization with Sharp and Next/Image, and server-side rendering (SSR) for faster page load times.",
     ],
   },
   {
@@ -276,8 +276,8 @@ const experience = [
     duration: "May 2023 - Jul 2023",
     points: [
       "Contributed to the development of a comprehensive Dashboarding and Reporting Tool utilizing Ruby on Rails and MySQL.",
-      "Resolved numerous UI bugs, engineered reusable and modular UI components using Tailwind CSS, integrated Chart.js for data visualization, and implemented paging and filters to ensure design consistency and enhance user interface reliability.",
-      "Collaborated cross-functionally to architect clean, maintainable code while implementing authentication, authorization, and caching strategies, thereby enhancing application efficiency and stronger data security.",
+      "Resolved UI issues and engineered reusable, modular components with Tailwind CSS, integrating Chart.js for data visualization and adding paging and filters to ensure a 10% faster load time and consistent user experience.",
+      "Collaborated with cross-functional teams to design scalable, maintainable code, implementing authentication, authorization, and caching techniques, leading to enhanced efficiency and fortified data security.",
     ],
   },
   // {
