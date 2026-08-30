@@ -1,0 +1,29 @@
+.line {
+  opacity: 0;
+  animation: appear 0.3s ease forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * The prompt only works with JavaScript, so it stays hidden until the root
+ * layout script marks the document as interactive.
+ */
+.inputRow {
+  display: none;
+}
+
+:global(.js) .inputRow {
+  display: flex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    opacity: 1;
+    animation: none;
+  }
+}
