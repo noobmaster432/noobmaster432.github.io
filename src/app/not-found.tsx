@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/components/Float.module.css";
-import ThemeToggle from "@/components/ThemeToggle";
 import { profile } from "@/data/resume";
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function NotFound() {
             {profile.name.split(" ")[0].toLowerCase()}
             <span className="text-accent">.</span>
           </Link>
-          <ThemeToggle />
         </div>
       </header>
 

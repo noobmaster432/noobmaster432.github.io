@@ -1,24 +1,15 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 /*
- * Palette follows LeetCode's own design tokens. Dark uses their values
- * directly (gray-10/20/40/70/100 and brand-orange). Light keeps the existing
- * neutrals but has to darken the orange: #ffa116 only reaches 1.96:1 on a
- * near-white background, well under WCAG AA.
+ * Palette follows LeetCode's own design tokens, taken directly.
+ *
+ * Dark is the only theme. The 3D illustrations are dark renders that were made
+ * to sit on a dark ground, and they looked wrong against a near-white page —
+ * so the light palette was dropped rather than shipped looking off. Everything
+ * reads these variables, and no `dark:` variants are used anywhere, which is
+ * what let the second theme go without touching a single component's classes.
  */
 :root {
-  --background: #fbfbfa;
-  --surface: #ffffff;
-  --foreground: #14171a;
-  --muted: #55606b;
-  --border: #e2e5e8;
-  --accent: #b45309;
-  --accent-soft: rgba(180, 83, 9, 0.1);
-}
-
-.dark {
   --background: #1a1a1a; /* gray-10  */
   --surface: #262626; /* gray-20  */
   --foreground: #f5f5f5; /* gray-100 */
@@ -42,6 +33,7 @@
 
 @layer base {
   html {
+    color-scheme: dark;
     scroll-behavior: smooth;
     /* Offset anchor targets so the sticky header never covers a heading. */
     scroll-padding-top: 5rem;

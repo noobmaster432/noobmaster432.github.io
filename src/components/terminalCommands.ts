@@ -24,7 +24,6 @@ export type CommandResult = {
   clear?: boolean;
   /** Id of a section to scroll into view. */
   scrollTo?: string;
-  toggleTheme?: boolean;
   /** Url to open in a new tab. */
   openUrl?: string;
 };
@@ -44,7 +43,6 @@ const helpRows: [string, string][] = [
   ["resume", "open the pdf"],
   ["contact", "email + links"],
   ["goto <id>", "jump to section"],
-  ["theme", "dark / light"],
   ["clear", "reset screen"],
   ["help", "this list"],
 ];
@@ -173,8 +171,6 @@ export function runCommand(raw: string): CommandResult {
       return { lines: [out(navLinks.map((link) => link.label.toLowerCase()).join("  "))] };
     case "goto":
       return gotoCommand(args[0]);
-    case "theme":
-      return { lines: [out("switching theme…")], toggleTheme: true };
     case "clear":
       return { lines: [], clear: true };
     default:

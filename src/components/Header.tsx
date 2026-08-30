@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/data/resume";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +26,7 @@ export default function Header() {
           <span className="text-accent">.</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden md:block">
+        <nav aria-label="Primary" className="hidden md:block md:ml-auto">
           <ul className="flex items-center gap-7 text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -43,7 +42,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}

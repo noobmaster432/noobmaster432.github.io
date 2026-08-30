@@ -19,17 +19,18 @@ export const metadata: Metadata = {
 };
 
 /**
- * Runs before paint so a stored light-mode preference never flashes dark first,
- * and so scroll reveals only arm themselves when JavaScript is available.
- * Dark is the default when nothing is stored.
+ * Marks the document as scripted before paint, which is what arms the scroll
+ * reveals — without it they stay visible rather than hidden, so the page still
+ * reads with JavaScript off. It no longer resolves a theme: the site is dark
+ * only, so the palette is plain CSS with nothing to restore.
  */
-const bootScript = `(function(){var e=document.documentElement;e.classList.add("js");var t="dark";try{if(localStorage.getItem("theme")==="light")t="light";}catch(n){}e.classList.toggle("dark",t==="dark");e.style.colorScheme=t;})();`;
+const bootScript = `(function(){document.documentElement.classList.add("js");})();`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

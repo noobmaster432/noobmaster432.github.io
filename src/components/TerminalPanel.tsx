@@ -16,18 +16,6 @@ const toneClass: Record<Line["tone"], string> = {
   blank: "",
 };
 
-function applyTheme() {
-  const root = document.documentElement;
-  const next = root.classList.contains("dark") ? "light" : "dark";
-  root.classList.toggle("dark", next === "dark");
-  root.style.colorScheme = next;
-  try {
-    window.localStorage.setItem("theme", next);
-  } catch {
-    // Storage can be blocked; the switch still applies for this visit.
-  }
-}
-
 export default function TerminalPanel() {
   const [history, setHistory] = useState<Line[]>([]);
   const [showBanner, setShowBanner] = useState(true);
@@ -69,7 +57,6 @@ export default function TerminalPanel() {
       ]);
     }
 
-    if (result.toggleTheme) applyTheme();
     if (result.openUrl) {
       window.open(result.openUrl, "_blank", "noopener,noreferrer");
     }
