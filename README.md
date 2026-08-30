@@ -30,8 +30,8 @@ The site runs at [http://localhost:3000](http://localhost:3000).
 ```
 src/
   app/
-    globals.css      Theme tokens, base styles, scroll-reveal CSS
-    layout.tsx       Root layout, metadata, pre-paint theme script
+    globals.css      Palette tokens, base styles, scroll-reveal CSS
+    layout.tsx       Root layout, metadata, pre-paint scripting flag
     page.tsx         Composes the seven page sections
   components/
     Header.tsx       Sticky nav with mobile disclosure menu
@@ -39,7 +39,6 @@ src/
     ResumeLink.tsx   Resume link with a hover/focus preview card
     Section.tsx      Shared section heading + spacing shell
     TerminalPanel.tsx  Shell session that anchors the hero
-    ThemeToggle.tsx  Dark/light switch
     sections/        Hero, About, Experience, Projects, Skills,
                      Achievements, Contact
   data/
@@ -57,26 +56,32 @@ page updates; the components hold no hard-coded content.
 Tailwind v4 is configured in CSS rather than a `tailwind.config.js`. Colour
 tokens are declared as CSS custom properties in `src/app/globals.css` and
 exposed to Tailwind through the `@theme inline` block, so utilities like
-`text-muted`, `bg-surface` and `border-border` resolve to the right value in
-either theme.
+`text-muted`, `bg-surface` and `border-border` resolve to the palette.
 
-The palette follows LeetCode's design tokens. Dark mode uses their values
+**The site is dark only.** The palette follows LeetCode's design tokens, taken
 directly — `gray-10` (`#1a1a1a`) for the background, `gray-20` (`#262626`) for
 surfaces, `gray-40` (`#3a3a3a`) for borders, `gray-70` (`#b7b7b7`) for muted
 text, `gray-100` (`#f5f5f5`) for body text, and `brand-orange` (`#ffa116`) as
 the accent.
 
-Light mode keeps its own neutrals and darkens the accent to `#b45309`. LeetCode's
-`#ffa116` only reaches 1.96:1 against a near-white background, far below the
-4.5:1 WCAG AA needs for text, so it cannot be reused as-is.
+A light theme existed and was removed: the astronaut and helmet are dark 3D
+renders made to sit on a dark ground, and they read badly against a near-white
+page. The accent was awkward there too — `#ffa116` manages only 1.96:1 on
+near-white, far below the 4.5:1 WCAG AA needs, so light mode had to substitute
+`#b45309` and never quite matched the dark palette it was paired with.
 
-- Dark is the default. Light is opt-in via the header toggle.
-- The choice persists in `localStorage` under the `theme` key.
-- A small inline script in `layout.tsx` applies the stored theme before first
-  paint, so reloading in light mode never flashes dark.
-- To change the accent colour, edit `--accent` and `--accent-soft` in both the
-  `:root` and `.dark` blocks. Keep a contrast ratio of at least 4.5:1 against
-  the background.
+Notes for changing it:
+
+- No `dark:` variants are used anywhere, and every colour goes through these
+  variables. That is what let the second theme be deleted without touching a
+  single component's classes, and it is worth preserving.
+- `color-scheme: dark` on `html` renders native UI — scrollbars, the terminal's
+  caret, form controls — to match. It is set in CSS rather than by script.
+- To change the accent, edit `--accent` and `--accent-soft` in `:root` and keep
+  at least 4.5:1 against `--background`.
+- Reintroducing a light theme means restoring the `@custom-variant dark` rule, a
+  second variable block, the toggle and its pre-paint script — and finding
+  illustrations that work on both grounds, which is the part that killed it.
 
 ## Animations
 
@@ -110,11 +115,9 @@ so they stay in sync with the rest of the page:
 | `resume`     | Open the resume PDF in a new tab          |
 | `ls`         | List the page sections                    |
 | `goto <id>`  | Scroll the page to a section              |
-| `theme`      | Toggle dark and light                     |
 | `clear`      | Empty the screen                          |
 
-Up and down arrows recall previous commands. `theme` drives the same `dark`
-class as the header toggle, so the two stay in agreement.
+Up and down arrows recall previous commands.
 
 Notes if you extend it:
 
@@ -205,7 +208,7 @@ Details worth preserving:
 - A "Skip to content" link is the first focusable element.
 - Visible focus rings on every interactive element; the mobile menu closes on
   `Escape`.
-- Text and accent colours meet WCAG AA contrast in both themes.
+- Text and accent colours meet WCAG AA contrast against the background.
 - Decorative dots and icons are `aria-hidden`; external links announce that they
   open in a new tab.
 
@@ -268,7 +271,7 @@ their filenames — there is no `<link>` tag to maintain, and the default
 
 `src/app/not-found.tsx` renders for any unmatched route. It reuses the terminal
 idiom from the hero — a failed `cat` for the missing page — with a link back
-home and the theme toggle, so a visitor who lands there is not stranded.
+home, so a visitor who lands there is not stranded.
 
 ## Illustrations
 
