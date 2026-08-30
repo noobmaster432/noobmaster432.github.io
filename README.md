@@ -255,19 +255,36 @@ their filenames — there is no `<link>` tag to maintain, and the default
 ## The 404 page
 
 `src/app/not-found.tsx` renders for any unmatched route. It reuses the terminal
-idiom from the hero — a failed `cat` for the missing page — alongside a floating
-astronaut illustration, with a link back home and the theme toggle so a visitor
-who lands there is not stranded.
+idiom from the hero — a failed `cat` for the missing page — with a link back
+home and the theme toggle, so a visitor who lands there is not stranded.
 
-The float is a CSS keyframe in `not-found.module.css` and is disabled under
-`prefers-reduced-motion`. The illustration is decorative, so it carries an empty
-`alt` and `aria-hidden`, which keeps it out of the accessibility tree.
+## Illustrations
 
-> **Asset provenance:** `public/not-found/astronaut.webp` is LaunchDarkly's
-> `toggle-floating.webp`, taken from their own 404 page. It is their brand
-> illustration rather than a stock or openly licensed asset, and it is used here
-> with that understood. Replacing it is a one-file swap — drop a new image at the
-> same path and adjust the `width`/`height` props to match its intrinsic size.
+Two decorative 3D renders live in `public/illustrations/`, used in three places:
+
+| Asset           | Where                                         | Displayed at |
+| --------------- | --------------------------------------------- | ------------ |
+| `astronaut.webp`| 404 page, and the about section's side column | 380–420px    |
+| `helmet.webp`   | Footer sign-off, beside the copyright line    | 96–128px     |
+
+They share a float animation from `src/components/Float.module.css`, which is a
+module rather than three copies of the same keyframes. The float is disabled
+under `prefers-reduced-motion`.
+
+All of them are decorative, so each carries an empty `alt` and `aria-hidden`,
+keeping them out of the accessibility tree. None of them convey information that
+is not already in the surrounding text.
+
+The helmet is stored at its native 365px rather than upscaled — the source is
+only 365px square, so a larger file would add bytes without adding detail. It is
+never displayed above 128px, which leaves enough for a 2x screen.
+
+> **Asset provenance:** the astronaut is LaunchDarkly's `toggle-floating.webp`,
+> taken from their own 404 page, and the helmet came from GitHub. Both are
+> third-party brand illustrations rather than stock or openly licensed assets,
+> and are used here with that understood. Replacing either is a one-file swap —
+> drop a new image at the same path and adjust the `width`/`height` props at
+> each usage to match its intrinsic size.
 
 ## Deployment
 
