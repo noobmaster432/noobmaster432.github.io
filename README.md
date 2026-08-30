@@ -1,4 +1,4 @@
-# Gyanendra Kumar Tiwari — Portfolio
+# Gyanendra Tiwari — Portfolio
 
 A single-page, responsive personal portfolio built with Next.js (App Router), TypeScript and Tailwind CSS. Static content only: no backend, no database, no API routes.
 
@@ -137,19 +137,31 @@ read `resumeFile` in `src/data/resume.ts`, so swapping the PDF is a one-line
 change.
 
 Hovering or keyboard-focusing the link opens a card showing the top of page one.
-The image is Google Drive's own rendered thumbnail
-(`drive.google.com/thumbnail?id=…`), not an embedded `/preview` iframe, so the
-card costs one image with no third-party script or cookies. `next.config.ts`
-allows that host so Next's image optimizer fetches and caches it server-side
-rather than having the browser hotlink Drive.
+That image is `public/resume-preview.webp`, committed to the repository, so the
+card costs one same-origin image with no third-party frame, script or cookie.
 
-**The Drive file must stay shared as "anyone with the link".** If it is switched
-back to private the thumbnail 404s and the card renders empty — the link itself
-still works, but the preview silently stops.
+It used to be Google Drive's own thumbnail endpoint, fetched and cached by
+Next's image optimizer. Static export removed the optimizer, and the browser
+cannot pick up the slack: Chrome refuses the direct cross-origin request to
+`drive.google.com/thumbnail` with `ERR_BLOCKED_BY_ORB`, so a hotlinked preview
+never paints. Committing the image is what makes the card work without a server.
+
+**`href` still points at the live Drive document, so only the preview image can
+fall behind.** Regenerate it after changing the PDF:
+
+```bash
+curl -sL "https://drive.google.com/thumbnail?id=<FILE_ID>&sz=w1000" -o /tmp/r.png
+magick /tmp/r.png -resize 640x -crop 640x512+0+0 +repage -strip /tmp/r-crop.png
+cwebp -q 82 /tmp/r-crop.png -o public/resume-preview.webp
+```
+
+640x512 is the card's display box (320x256 CSS px) at 2x, and the crop matches
+the `object-cover object-top` window, so no pixel is downloaded and then hidden.
+That keeps it around 55KB, against 433KB for the full-page PNG from Drive.
 
 Behaviour worth preserving:
 
-- The thumbnail is only requested on first hover or focus, so the ~200KB image
+- The thumbnail is only requested on first hover or focus, so the ~55KB image
   never lands in the initial page load.
 - The card is `aria-hidden` and duplicates nothing the link text doesn't say, so
   screen readers just get a link. `Escape` dismisses it.
@@ -288,6 +300,42 @@ never displayed above 128px, which leaves enough for a 2x screen.
 
 ## Deployment
 
-The page is fully static and prerenders at build time, so it can be deployed to
-any static or Node host. On Vercel, importing the repository requires no extra
-configuration.
+The site is deployed to GitHub Pages at
+[noobmaster432.github.io](https://noobmaster432.github.io). Every push to `main`
+runs `.github/workflows/deploy.yml`, which builds and publishes `out/`.
+
+**One-time setup:** in the repository's Settings → Pages, set **Source** to
+**GitHub Actions**. Without that the workflow builds fine and then fails at the
+deploy step.
+
+### How it is configured
+
+`next.config.ts` sets `output: "export"`, so `npm run build` writes a
+self-contained static site to `out/` instead of a server bundle. Every route
+already prerendered, so nothing was lost in the move.
+
+Two consequences are worth knowing before changing anything:
+
+- **No image optimizer.** It is a server feature, so `images.unoptimized` is on
+  and every image ships exactly as committed. Anything added to `public/` has to
+  be compressed by hand — see the WebP sizes noted under Projects and
+  Illustrations. This is also why the resume preview is a local file.
+- **No `basePath`.** The repository is named `noobmaster432.github.io`, so Pages
+  serves it from the domain root and root-relative asset paths resolve. Renaming
+  the repository turns it into a project site served from `/<repo>/`, which
+  needs `basePath` and `assetPrefix` set to match or every asset 404s.
+
+`app/not-found.tsx` is exported as `out/404.html`, which Pages serves for any
+unmatched path — the custom 404 works on a static host with no routing config.
+
+`public/.nojekyll` stops Jekyll from stripping `_next/`, whose leading
+underscore it would otherwise treat as private. The Actions deployment does not
+run Jekyll, so it is currently redundant, but it is what keeps the site from
+silently losing all CSS and JS if Pages is ever switched to serving from a
+branch.
+
+### Deploying elsewhere
+
+The export is plain files, so any static host works. To go back to a Node host
+such as Vercel and regain the image optimizer, drop `output` and `unoptimized`
+from `next.config.ts`.
