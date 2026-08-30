@@ -29,15 +29,21 @@ export const socials: SocialLink[] = [
 ];
 
 /**
- * The PDF itself, plus Drive's server-rendered page-one thumbnail.
- * Using the thumbnail rather than Drive's /preview iframe keeps the hover
- * card to a single image — no third-party frame, script or cookies.
+ * The PDF itself, plus a committed image of the top of page one for the hover
+ * card. A single image keeps the card free of any third-party frame, script or
+ * cookie.
+ *
+ * The preview is checked in rather than pulled from Drive's /thumbnail
+ * endpoint: on a static host there is no image optimizer to fetch it
+ * server-side, and Chrome blocks the direct cross-origin request (ORB), so a
+ * hotlinked preview never renders. See the README for how to regenerate this
+ * file when the PDF changes — `href` always points at the live document, so
+ * only the thumbnail can fall behind.
  */
 export const resumeFile = {
   label: "Resume",
   href: "https://drive.google.com/file/d/1XJ7K6Q5R_zrfPa3kAIoRuNbdsD5xj70Q/view?usp=sharing",
-  previewSrc:
-    "https://drive.google.com/thumbnail?id=1XJ7K6Q5R_zrfPa3kAIoRuNbdsD5xj70Q&sz=w800",
+  previewSrc: "/resume-preview.webp",
 } as const;
 
 export type Experience = {

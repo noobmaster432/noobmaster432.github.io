@@ -52,7 +52,7 @@ export default function ResumeLink({
   placement = "bottom",
 }: Props) {
   const [open, setOpen] = useState(false);
-  /** The thumbnail is ~200KB, so it is only fetched once someone reaches for it. */
+  /** The thumbnail is ~55KB, so it is only fetched once someone reaches for it. */
   const [requested, setRequested] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [side, setSide] = useState<Side>(placement);
