@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Palette follows LeetCode's own design tokens. Dark uses their values
+ * directly (gray-10/20/40/70/100 and brand-orange). Light keeps the existing
+ * neutrals but has to darken the orange: #ffa116 only reaches 1.96:1 on a
+ * near-white background, well under WCAG AA.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfbfa;
+  --surface: #ffffff;
+  --foreground: #14171a;
+  --muted: #55606b;
+  --border: #e2e5e8;
+  --accent: #b45309;
+  --accent-soft: rgba(180, 83, 9, 0.1);
+}
+
+.dark {
+  --background: #1a1a1a; /* gray-10  */
+  --surface: #262626; /* gray-20  */
+  --foreground: #f5f5f5; /* gray-100 */
+  --muted: #b7b7b7; /* gray-70  */
+  --border: #3a3a3a; /* gray-40  */
+  --accent: #ffa116; /* brand-orange */
+  --accent-soft: rgba(255, 161, 22, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky header never covers a heading. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--background);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/*
+ * Scroll reveals. Scoped to `.js` so the content is visible by default and only
+ * starts hidden when JavaScript is present to reveal it again.
+ */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.js [data-reveal][data-revealed] {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/*
+ * Tool chips come online one after another once their panel scrolls into view.
+ * Same `.js` gate as the reveals: without scripting they render fully lit.
+ */
+.js [data-tool] {
+  opacity: 0.3;
+  transition:
+    opacity 0.45s ease,
+    border-color 0.45s ease;
+  transition-delay: var(--tool-delay, 0ms);
+}
+
+.js [data-tool] [data-tool-dot] {
+  background-color: var(--border);
+  transition: background-color 0.45s ease;
+  transition-delay: var(--tool-delay, 0ms);
+}
+
+.js [data-reveal][data-revealed] [data-tool] {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.js [data-reveal][data-revealed] [data-tool] [data-tool-dot] {
+  background-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .js [data-tool] {
+    opacity: 1;
+  }
+
+  .js [data-tool] [data-tool-dot] {
+    background-color: var(--accent);
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
