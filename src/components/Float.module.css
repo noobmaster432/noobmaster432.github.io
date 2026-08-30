@@ -1,3 +1,4 @@
+/* Shared by the 404 page and the about section. */
 .float {
   animation: float 7s ease-in-out infinite;
 }

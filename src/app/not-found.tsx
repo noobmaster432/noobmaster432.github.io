@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "@/components/Float.module.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import { profile } from "@/data/resume";
-import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
   title: `Page not found — ${profile.name}`,
@@ -59,7 +59,7 @@ export default function NotFound() {
 
           <div className="order-first flex justify-center lg:order-last">
             <Image
-              src="/not-found/astronaut.webp"
+              src="/illustrations/astronaut.webp"
               alt=""
               aria-hidden="true"
               width={1004}
