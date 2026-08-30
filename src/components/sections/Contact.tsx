@@ -1,3 +1,5 @@
+import Image from "next/image";
+import styles from "../Float.module.css";
 import { profile, socials } from "@/data/resume";
 import AskPanel from "../AskPanel";
 import Reveal from "../Reveal";
@@ -75,9 +77,22 @@ export default function Contact() {
         </div>
 
         <Reveal delay={0.15}>
-          <p className="mt-16 border-t border-border pt-8 font-mono text-xs text-muted">
-            © {year} {profile.name} · {profile.location}
-          </p>
+          <div className="mt-16 flex items-center justify-between gap-6 border-t border-border pt-8">
+            <p className="font-mono text-xs text-muted">
+              © {year} {profile.name} · {profile.location}
+            </p>
+
+            {/* Decorative only — signs the page off against the about astronaut. */}
+            <Image
+              src="/illustrations/helmet.webp"
+              alt=""
+              aria-hidden="true"
+              width={365}
+              height={365}
+              sizes="(min-width: 640px) 128px, 96px"
+              className={`${styles.float} w-24 shrink-0 sm:w-32`}
+            />
+          </div>
         </Reveal>
       </div>
     </footer>
